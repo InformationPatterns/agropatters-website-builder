@@ -49,6 +49,8 @@
 
 	'use strict';
 	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _react = __webpack_require__(/*! react */ 1);
@@ -57,29 +59,29 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 35);
 	
-	var _translations = __webpack_require__(/*! ./translations.jsx */ 176);
+	var _translations = __webpack_require__(/*! ./translations.jsx */ 175);
 	
 	var _translations2 = _interopRequireDefault(_translations);
 	
-	var _Header = __webpack_require__(/*! ./components/Header.jsx */ 177);
+	var _Header = __webpack_require__(/*! ./components/Header.jsx */ 176);
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
-	var _Sections = __webpack_require__(/*! ./components/Sections.jsx */ 178);
+	var _Sections = __webpack_require__(/*! ./components/Sections.jsx */ 177);
 	
 	var _Sections2 = _interopRequireDefault(_Sections);
 	
-	var _Footer = __webpack_require__(/*! ./components/Footer.jsx */ 179);
+	var _Footer = __webpack_require__(/*! ./components/Footer.jsx */ 178);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
-	var _BackToTop = __webpack_require__(/*! ./components/BackToTop.jsx */ 180);
+	var _BackToTop = __webpack_require__(/*! ./components/BackToTop.jsx */ 179);
 	
 	var _BackToTop2 = _interopRequireDefault(_BackToTop);
 	
-	var _LanguateButton = __webpack_require__(/*! ./components/LanguateButton.jsx */ 181);
+	var _LanguageButton = __webpack_require__(/*! ./components/LanguageButton.jsx */ 181);
 	
-	var _LanguateButton2 = _interopRequireDefault(_LanguateButton);
+	var _LanguageButton2 = _interopRequireDefault(_LanguageButton);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -90,32 +92,43 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var App = function (_React$Component) {
-			_inherits(App, _React$Component);
+	  _inherits(App, _React$Component);
 	
-			function App() {
-					_classCallCheck(this, App);
+	  function App() {
+	    _classCallCheck(this, App);
 	
-					return _possibleConstructorReturn(this, Object.getPrototypeOf(App).apply(this, arguments));
-			}
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this));
 	
-			_createClass(App, [{
-					key: 'render',
-					value: function render() {
-							return _react2.default.createElement(
-									'div',
-									{ id: 'top' },
-									_react2.default.createElement(_Header2.default, (0, _translations2.default)('header', 'en')),
-									_react2.default.createElement(_Sections2.default, (0, _translations2.default)('app', 'en')),
-									_react2.default.createElement(_Sections2.default, (0, _translations2.default)('info', 'en')),
-									_react2.default.createElement(_Sections2.default, (0, _translations2.default)('data', 'en')),
-									_react2.default.createElement(_Footer2.default, (0, _translations2.default)('footer', 'en')),
-									_react2.default.createElement(_BackToTop2.default, null),
-									_react2.default.createElement(_LanguateButton2.default, null)
-							);
-					}
-			}]);
+	    _this.state = {
+	      lang: 'es'
+	    };
+	    return _this;
+	  }
 	
-			return App;
+	  _createClass(App, [{
+	    key: 'render',
+	    value: function render() {
+	      var lang = this.state.lang;
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'top' },
+	        _react2.default.createElement(_Header2.default, (0, _translations2.default)('header', lang)),
+	        _react2.default.createElement(_Sections2.default, (0, _translations2.default)('app', lang)),
+	        _react2.default.createElement(_Sections2.default, (0, _translations2.default)('share', lang)),
+	        _react2.default.createElement(_Sections2.default, (0, _translations2.default)('data', lang)),
+	        _react2.default.createElement(_Footer2.default, (0, _translations2.default)('footer', lang)),
+	        _react2.default.createElement(_LanguageButton2.default, _extends({ lang: lang, onChange: this.onChange.bind(this) }, (0, _translations2.default)('languageButton', lang))),
+	        _react2.default.createElement(_BackToTop2.default, null)
+	      );
+	    }
+	  }, {
+	    key: 'onChange',
+	    value: function onChange(lang) {
+	      this.setState({ lang: lang });
+	    }
+	  }]);
+	
+	  return App;
 	}(_react2.default.Component);
 	
 	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('app'));
@@ -22049,8 +22062,7 @@
 	module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ },
-/* 175 */,
-/* 176 */
+/* 175 */
 /*!******************************!*\
   !*** ./app/translations.jsx ***!
   \******************************/
@@ -22059,7 +22071,7 @@
 	'use strict';
 	
 	var T9n = function T9n(name, lang) {
-		if (lang == 'en') return en[name] || {};else return es[name] || {};
+		if (lang == 'en') return en[name] || {};else if (lang == 'es') return es[name] || {};else return {};
 	};
 	module.exports = T9n;
 	
@@ -22077,7 +22089,7 @@
 			content: 'We build apps that help people capture and display data easily. These apps are connected to third party data providers and to sensors that send out detailed information about specific environmental conditions. The result is a comprehensive model of reality built by the multiple participants that are constantly observing the',
 			className: 'segment-apps'
 		},
-		info: {
+		share: {
 			title: 'Information Sharing',
 			content: 'Collaboration is a key component of our software solutions. Each person that uses our solutions adds valuable information and benefits from the information provided by others. The collaborative approach to building datasets opens countless opportunities to all those interested in understanding different subject matters. The collaborative approach that we have taken has proven to be invaluable in our solutions for transportation and agriculture.',
 			className: 'segment-share'
@@ -22086,13 +22098,55 @@
 			title: 'Data Visualization',
 			content: 'We deliver useful information in novel ways, by taking advantage of visualizations such as thematic maps, charts and graphs and dashboards. These visual tools summarize the big data repositories that are critical to the definition and identification of information patterns, that constantly change both spatially and through time.',
 			className: 'segment-data'
+		},
+		footer: {
+			bioTitle: 'Company Bio',
+			bioContent: 'Information Patterns is a pioneer in collaboration and visual display of information. It has developed and built solutions that have been successfully deployed worldwide using best-of- breed technologies.',
+			projects: 'Our Projects',
+			madeBy: 'Made by'
+		},
+		languageButton: {
+			language: 'Language'
 		}
 	};
 	
-	var es = {};
+	var es = {
+		header: {
+			title: '',
+			subTitle: '',
+			contactUs: '',
+			appText: '',
+			infoText: '',
+			dataText: ''
+		},
+		app: {
+			title: '',
+			content: '',
+			className: 'segment-apps'
+		},
+		share: {
+			title: '',
+			content: '',
+			className: 'segment-share'
+		},
+		data: {
+			title: '',
+			content: '',
+			className: 'segment-data'
+		},
+		footer: {
+			bioTitle: '',
+			bioContent: '',
+			projects: '',
+			madeBy: ''
+		},
+		languageButton: {
+			language: ''
+		}
+	};
 
 /***/ },
-/* 177 */
+/* 176 */
 /*!***********************************!*\
   !*** ./app/components/Header.jsx ***!
   \***********************************/
@@ -22177,7 +22231,7 @@
 								{ className: "row" },
 								_react2.default.createElement(
 									"a",
-									{ href: "#section-app", className: "col s4" },
+									{ href: "#segment-apps", className: "col s4" },
 									_react2.default.createElement(
 										"div",
 										{ className: "icon-block" },
@@ -22203,7 +22257,7 @@
 								),
 								_react2.default.createElement(
 									"a",
-									{ href: "#section-share", className: "col s4" },
+									{ href: "#segment-share", className: "col s4" },
 									_react2.default.createElement(
 										"div",
 										{ className: "icon-block" },
@@ -22229,7 +22283,7 @@
 								),
 								_react2.default.createElement(
 									"a",
-									{ href: "#section-data", className: "col s4" },
+									{ href: "#segment-data", className: "col s4" },
 									_react2.default.createElement(
 										"div",
 										{ className: "icon-block" },
@@ -22266,7 +22320,7 @@
 	module.exports = Header;
 
 /***/ },
-/* 178 */
+/* 177 */
 /*!*************************************!*\
   !*** ./app/components/Sections.jsx ***!
   \*************************************/
@@ -22377,7 +22431,7 @@
 	// </div>
 
 /***/ },
-/* 179 */
+/* 178 */
 /*!***********************************!*\
   !*** ./app/components/Footer.jsx ***!
   \***********************************/
@@ -22430,12 +22484,12 @@
 									_react2.default.createElement(
 										"h5",
 										{ className: "white-text" },
-										"Company Bio"
+										this.props.bioTitle
 									),
 									_react2.default.createElement(
 										"p",
 										{ className: "grey-text text-lighten-4" },
-										"Information Patterns is a pioneer in collaboration and visual display of information. It has developed and built solutions that have been successfully deployed worldwide using best-of- breed technologies."
+										this.props.bioContent
 									),
 									_react2.default.createElement(
 										"a",
@@ -22458,7 +22512,7 @@
 									_react2.default.createElement(
 										"h5",
 										{ className: "white-text" },
-										"Our Projects"
+										this.props.projects
 									),
 									_react2.default.createElement(
 										"ul",
@@ -22502,7 +22556,8 @@
 							_react2.default.createElement(
 								"div",
 								{ className: "container" },
-								"Made by Emma Stoumen ",
+								this.props.madeBy,
+								" Emma Stoumen ",
 								_react2.default.createElement("a", { className: "brown-text text-lighten-3" })
 							)
 						)
@@ -22517,7 +22572,7 @@
 	module.exports = Footer;
 
 /***/ },
-/* 180 */
+/* 179 */
 /*!**************************************!*\
   !*** ./app/components/BackToTop.jsx ***!
   \**************************************/
@@ -22573,13 +22628,14 @@
 	module.exports = BackToTop;
 
 /***/ },
+/* 180 */,
 /* 181 */
 /*!*******************************************!*\
-  !*** ./app/components/LanguateButton.jsx ***!
+  !*** ./app/components/LanguageButton.jsx ***!
   \*******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -22595,26 +22651,40 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var LanguateButton = function (_React$Component) {
-		_inherits(LanguateButton, _React$Component);
+	var LanguageButton = function (_React$Component) {
+	  _inherits(LanguageButton, _React$Component);
 	
-		function LanguateButton() {
-			_classCallCheck(this, LanguateButton);
+	  function LanguageButton() {
+	    _classCallCheck(this, LanguageButton);
 	
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(LanguateButton).apply(this, arguments));
-		}
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(LanguageButton).apply(this, arguments));
+	  }
 	
-		_createClass(LanguateButton, [{
-			key: "render",
-			value: function render() {
-				return _react2.default.createElement("div", { className: "" });
-			}
-		}]);
+	  _createClass(LanguageButton, [{
+	    key: 'lang',
+	    value: function lang() {
+	      if (this.props.lang == 'es') return 'English';else if (this.props.lang == 'en') return 'Español';
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { onClick: this.toggle.bind(this), className: 'waves-effect waves-light btn language-button' },
+	        this.lang()
+	      );
+	    }
+	  }, {
+	    key: 'toggle',
+	    value: function toggle() {
+	      if (this.props.lang == 'en') this.props.onChange('es');else if (this.props.lang == 'es') this.props.onChange('en');
+	    }
+	  }]);
 	
-		return LanguateButton;
+	  return LanguageButton;
 	}(_react2.default.Component);
 	
-	module.exports = LanguateButton;
+	module.exports = LanguageButton;
 
 /***/ }
 /******/ ]);

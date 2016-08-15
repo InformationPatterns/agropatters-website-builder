@@ -8,20 +8,30 @@ import Sections from './components/Sections.jsx';
 import Footer from './components/Footer.jsx';
 
 import BackToTop from './components/BackToTop.jsx';
-import LanguateButton from './components/LanguateButton.jsx';
+import LanguageButton from './components/LanguageButton.jsx';
 
 
 class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      lang: 'es'
+    }
+  }
   render () {
+    let lang = this.state.lang
     return (<div id="top">
-    	<Header {...T9n('header', 'en')} />
-    	<Sections {...T9n('app', 'en')} />
-			<Sections {...T9n('info', 'en')} />
-			<Sections {...T9n('data', 'en')} />
-			<Footer {...T9n('footer', 'en')} />
+    	<Header {...T9n('header', lang)} />
+    	<Sections {...T9n('app', lang)} />
+			<Sections {...T9n('share', lang)} />
+			<Sections {...T9n('data', lang)} />
+			<Footer {...T9n('footer', lang)} />
+      <LanguageButton lang={lang} onChange={this.onChange.bind(this)} {...T9n('languageButton', lang)} />
 			<BackToTop />
-			<LanguateButton />
 		</div>);
+  }
+  onChange(lang) {
+    this.setState({lang})
   }
 }
 

@@ -25,7 +25,7 @@ class Header extends React.Component {
 
 		      <div className="row">
 
-		        <a href="#section-app" className="col s4">
+		        <a href="#segment-apps" className="col s4">
 		          <div className="icon-block">
 		            <h2 className="center">
 		              <div className="btn-floating btn-large waves-effect waves-light orange"><i className="material-icons">phonelink_ring</i></div>
@@ -33,16 +33,16 @@ class Header extends React.Component {
 		            <h5 className="center teal-text hide-on-small-only">{this.props.appText}</h5>
 		          </div>
 		        </a>
-		        
-		        <a href="#section-share" className="col s4">
+
+		        <a href="#segment-share" className="col s4">
 		          <div className="icon-block">
 		            <h2 className="center">
 		            <div className="btn-floating btn-large waves-effect waves-light orange"><i className="material-icons">view_quilt</i></div></h2>
 		            <h5 className="center teal-text hide-on-small-only">{this.props.infoText}</h5>
 		          </div>
-		        </a>    
+		        </a>
 
-		        <a href="#section-data" className="col s4">
+		        <a href="#segment-data" className="col s4">
 		          <div className="icon-block">
 		            <h2 className="center">
 		              <div className="btn-floating btn-large waves-effect waves-light orange"><i className="material-icons">equalizer</i></div>

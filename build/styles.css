@@ -60,32 +60,32 @@ footer.page-footer {
 
 /* custom css */
 
-.half-screen { 
+.half-screen {
   /* at least half the screen size */
   min-height: 50vh;
 }
 
-.quarter-screen { 
+.quarter-screen {
   /* at least quarter the screen size */
   min-height: 25vh;
 }
 
-.most-screen { 
+.most-screen {
   /* at least more than half the screen size */
   min-height: 65vh;
 }
 
-.large-screen { 
+.large-screen {
   /* it very big */
   min-height: 75vh;
 }
 
-.small-screen { 
+.small-screen {
   /* it very big */
   min-height: 25vh;
 }
 
-.font-size-large { 
+.font-size-large {
   font-size: 20px;
 }
 
@@ -129,7 +129,9 @@ footer.page-footer {
   background-repeat: no-repeat;
 }
 
-.languageButton {
-  right: 0;
-  top: 0;
+.language-button {
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  z-index: 1000;
 }
