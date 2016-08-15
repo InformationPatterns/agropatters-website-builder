@@ -57,6 +57,30 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 35);
 	
+	var _translations = __webpack_require__(/*! ./translations.jsx */ 176);
+	
+	var _translations2 = _interopRequireDefault(_translations);
+	
+	var _Header = __webpack_require__(/*! ./components/Header.jsx */ 177);
+	
+	var _Header2 = _interopRequireDefault(_Header);
+	
+	var _Sections = __webpack_require__(/*! ./components/Sections.jsx */ 178);
+	
+	var _Sections2 = _interopRequireDefault(_Sections);
+	
+	var _Footer = __webpack_require__(/*! ./components/Footer.jsx */ 179);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
+	
+	var _BackToTop = __webpack_require__(/*! ./components/BackToTop.jsx */ 180);
+	
+	var _BackToTop2 = _interopRequireDefault(_BackToTop);
+	
+	var _LanguateButton = __webpack_require__(/*! ./components/LanguateButton.jsx */ 181);
+	
+	var _LanguateButton2 = _interopRequireDefault(_LanguateButton);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66,30 +90,32 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var App = function (_React$Component) {
-	  _inherits(App, _React$Component);
+			_inherits(App, _React$Component);
 	
-	  function App() {
-	    _classCallCheck(this, App);
+			function App() {
+					_classCallCheck(this, App);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(App).apply(this, arguments));
-	  }
+					return _possibleConstructorReturn(this, Object.getPrototypeOf(App).apply(this, arguments));
+			}
 	
-	  _createClass(App, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'a',
-	          { className: 'waves-effect waves-light btn' },
-	          'button'
-	        )
-	      );
-	    }
-	  }]);
+			_createClass(App, [{
+					key: 'render',
+					value: function render() {
+							return _react2.default.createElement(
+									'div',
+									{ id: 'top' },
+									_react2.default.createElement(_Header2.default, (0, _translations2.default)('header', 'en')),
+									_react2.default.createElement(_Sections2.default, (0, _translations2.default)('app', 'en')),
+									_react2.default.createElement(_Sections2.default, (0, _translations2.default)('info', 'en')),
+									_react2.default.createElement(_Sections2.default, (0, _translations2.default)('data', 'en')),
+									_react2.default.createElement(_Footer2.default, (0, _translations2.default)('footer', 'en')),
+									_react2.default.createElement(_BackToTop2.default, null),
+									_react2.default.createElement(_LanguateButton2.default, null)
+							);
+					}
+			}]);
 	
-	  return App;
+			return App;
 	}(_react2.default.Component);
 	
 	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('app'));
@@ -22021,6 +22047,574 @@
 	var ReactMount = __webpack_require__(/*! ./ReactMount */ 167);
 	
 	module.exports = ReactMount.renderSubtreeIntoContainer;
+
+/***/ },
+/* 175 */,
+/* 176 */
+/*!******************************!*\
+  !*** ./app/translations.jsx ***!
+  \******************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	var T9n = function T9n(name, lang) {
+		if (lang == 'en') return en[name] || {};else return es[name] || {};
+	};
+	module.exports = T9n;
+	
+	var en = {
+		header: {
+			title: 'Information Patterns',
+			subTitle: 'We Are a Software Development Company',
+			contactUs: 'Contact Us',
+			appText: 'Apps and Hardware',
+			infoText: 'Information Sharing',
+			dataText: 'Data Visualization'
+		},
+		app: {
+			title: 'Applications, Content and Sensors',
+			content: 'We build apps that help people capture and display data easily. These apps are connected to third party data providers and to sensors that send out detailed information about specific environmental conditions. The result is a comprehensive model of reality built by the multiple participants that are constantly observing the',
+			className: 'segment-apps'
+		},
+		info: {
+			title: 'Information Sharing',
+			content: 'Collaboration is a key component of our software solutions. Each person that uses our solutions adds valuable information and benefits from the information provided by others. The collaborative approach to building datasets opens countless opportunities to all those interested in understanding different subject matters. The collaborative approach that we have taken has proven to be invaluable in our solutions for transportation and agriculture.',
+			className: 'segment-share'
+		},
+		data: {
+			title: 'Data Visualization',
+			content: 'We deliver useful information in novel ways, by taking advantage of visualizations such as thematic maps, charts and graphs and dashboards. These visual tools summarize the big data repositories that are critical to the definition and identification of information patterns, that constantly change both spatially and through time.',
+			className: 'segment-data'
+		}
+	};
+	
+	var es = {};
+
+/***/ },
+/* 177 */
+/*!***********************************!*\
+  !*** ./app/components/Header.jsx ***!
+  \***********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Header = function (_React$Component) {
+		_inherits(Header, _React$Component);
+	
+		function Header() {
+			_classCallCheck(this, Header);
+	
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Header).apply(this, arguments));
+		}
+	
+		_createClass(Header, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"div",
+					null,
+					_react2.default.createElement(
+						"div",
+						{ id: "index-banner", className: "segment-header large-screen" },
+						_react2.default.createElement(
+							"div",
+							{ className: "section" },
+							_react2.default.createElement(
+								"div",
+								{ className: "container" },
+								_react2.default.createElement("br", null),
+								_react2.default.createElement(
+									"h1",
+									{ className: "header center teal-text text-darken-3 white-glow" },
+									this.props.title
+								),
+								_react2.default.createElement(
+									"div",
+									{ className: "row center" },
+									_react2.default.createElement(
+										"h5",
+										{ className: "header col s12 light teal-text text-darken-3 white-glow" },
+										this.props.subTitle
+									)
+								),
+								_react2.default.createElement(
+									"div",
+									{ className: "row center hide-on-small-only" },
+									_react2.default.createElement(
+										"a",
+										{ id: "download-button", className: "btn-large waves-effect waves-light orange ", href: "mailto:gabriel.coch@infopatterns.com?Subject=Contact%20InfoPatterns" },
+										this.props.contactUs
+									)
+								),
+								_react2.default.createElement("br", null)
+							)
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "container small-screen" },
+						_react2.default.createElement(
+							"div",
+							{ className: "section" },
+							_react2.default.createElement(
+								"div",
+								{ className: "row" },
+								_react2.default.createElement(
+									"a",
+									{ href: "#section-app", className: "col s4" },
+									_react2.default.createElement(
+										"div",
+										{ className: "icon-block" },
+										_react2.default.createElement(
+											"h2",
+											{ className: "center" },
+											_react2.default.createElement(
+												"div",
+												{ className: "btn-floating btn-large waves-effect waves-light orange" },
+												_react2.default.createElement(
+													"i",
+													{ className: "material-icons" },
+													"phonelink_ring"
+												)
+											)
+										),
+										_react2.default.createElement(
+											"h5",
+											{ className: "center teal-text hide-on-small-only" },
+											this.props.appText
+										)
+									)
+								),
+								_react2.default.createElement(
+									"a",
+									{ href: "#section-share", className: "col s4" },
+									_react2.default.createElement(
+										"div",
+										{ className: "icon-block" },
+										_react2.default.createElement(
+											"h2",
+											{ className: "center" },
+											_react2.default.createElement(
+												"div",
+												{ className: "btn-floating btn-large waves-effect waves-light orange" },
+												_react2.default.createElement(
+													"i",
+													{ className: "material-icons" },
+													"view_quilt"
+												)
+											)
+										),
+										_react2.default.createElement(
+											"h5",
+											{ className: "center teal-text hide-on-small-only" },
+											this.props.infoText
+										)
+									)
+								),
+								_react2.default.createElement(
+									"a",
+									{ href: "#section-data", className: "col s4" },
+									_react2.default.createElement(
+										"div",
+										{ className: "icon-block" },
+										_react2.default.createElement(
+											"h2",
+											{ className: "center" },
+											_react2.default.createElement(
+												"div",
+												{ className: "btn-floating btn-large waves-effect waves-light orange" },
+												_react2.default.createElement(
+													"i",
+													{ className: "material-icons" },
+													"equalizer"
+												)
+											)
+										),
+										_react2.default.createElement(
+											"h5",
+											{ className: "center teal-text hide-on-small-only" },
+											this.props.dataText
+										)
+									)
+								)
+							)
+						)
+					)
+				);
+			}
+		}]);
+	
+		return Header;
+	}(_react2.default.Component);
+	
+	module.exports = Header;
+
+/***/ },
+/* 178 */
+/*!*************************************!*\
+  !*** ./app/components/Sections.jsx ***!
+  \*************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Sections = function (_React$Component) {
+			_inherits(Sections, _React$Component);
+	
+			function Sections() {
+					_classCallCheck(this, Sections);
+	
+					return _possibleConstructorReturn(this, Object.getPrototypeOf(Sections).apply(this, arguments));
+			}
+	
+			_createClass(Sections, [{
+					key: "render",
+					value: function render() {
+							return _react2.default.createElement(
+									"div",
+									null,
+									_react2.default.createElement("div", { id: this.props.className, className: this.props.className + " valign-wrapper most-screen" }),
+									_react2.default.createElement(
+											"div",
+											{ className: "container quarter-screen" },
+											_react2.default.createElement(
+													"div",
+													{ className: "section" },
+													_react2.default.createElement(
+															"div",
+															{ className: "row" },
+															_react2.default.createElement(
+																	"div",
+																	{ className: "col s12 center teal-text" },
+																	_react2.default.createElement(
+																			"h4",
+																			null,
+																			this.props.title
+																	),
+																	_react2.default.createElement(
+																			"h3",
+																			null,
+																			_react2.default.createElement("i", { className: "mdi-content-send brown-text" })
+																	),
+																	_react2.default.createElement(
+																			"p",
+																			{ className: "center-align light font-size-large" },
+																			" ",
+																			this.props.content
+																	)
+															)
+													)
+											)
+									)
+							);
+					}
+			}]);
+	
+			return Sections;
+	}(_react2.default.Component);
+	
+	module.exports = Sections;
+	
+	/*
+	<div id="share" className="segment-share valign-wrapper most-screen"></div>
+	<div className="container quarter-screen">
+	<div className="section">
+	  <div className="row">
+	    <div className="col s12 center teal-text">
+	      <h4>Information Sharing</h4>
+	      <h3><i className="mdi-content-send brown-text"></i></h3>
+	      <p className="center-align light font-size-large">Collaboration is a key component of our software solutions. Each person that uses our solutions adds valuable information and benefits from the information provided by others. The collaborative approach to building datasets opens countless opportunities to all those interested in understanding different subject matters. The collaborative approach that we have taken has proven to be invaluable in our solutions for transportation and agriculture.</p>
+	    </div>
+	  </div>
+	</div>
+	</div>
+	
+	*/
+	// <div id="data" class="segment-data valign-wrapper most-screen"></div>
+	
+	// <div class="container quarter-screen">
+	//   <div class="section">
+	
+	//     <div class="row">
+	//       <div class="col s12 center teal-text">
+	//       <h4>Data Visualization</h4>
+	//         <h3><i class="mdi-content-send brown-text"></i></h3>
+	//         <p class="center-align light font-size-large">We deliver useful information in novel ways, by taking advantage of visualizations such as thematic maps, charts and graphs and dashboards. These visual tools summarize the big data repositories that are critical to the definition and identification of information patterns, that constantly change both spatially and through time.</p>
+	//       </div>
+	//     </div>
+	
+	//   </div>
+	// </div>
+
+/***/ },
+/* 179 */
+/*!***********************************!*\
+  !*** ./app/components/Footer.jsx ***!
+  \***********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Footer = function (_React$Component) {
+		_inherits(Footer, _React$Component);
+	
+		function Footer() {
+			_classCallCheck(this, Footer);
+	
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Footer).apply(this, arguments));
+		}
+	
+		_createClass(Footer, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"div",
+					null,
+					_react2.default.createElement("div", { className: "segment-footer valign-wrapper half-screen" }),
+					_react2.default.createElement(
+						"footer",
+						{ className: "page-footer teal" },
+						_react2.default.createElement(
+							"div",
+							{ className: "container" },
+							_react2.default.createElement(
+								"div",
+								{ className: "row" },
+								_react2.default.createElement(
+									"div",
+									{ className: "col l6 s12" },
+									_react2.default.createElement(
+										"h5",
+										{ className: "white-text" },
+										"Company Bio"
+									),
+									_react2.default.createElement(
+										"p",
+										{ className: "grey-text text-lighten-4" },
+										"Information Patterns is a pioneer in collaboration and visual display of information. It has developed and built solutions that have been successfully deployed worldwide using best-of- breed technologies."
+									),
+									_react2.default.createElement(
+										"a",
+										{ className: "grey-text text-lighten-1", href: "mailto:gabriel.coch@infopatterns.com?Subject=Contact%20InfoPatterns" },
+										"gabriel.coch@infopatterns.com"
+									)
+								),
+								_react2.default.createElement(
+									"div",
+									{ className: "col l3 s12" },
+									_react2.default.createElement(
+										"h1",
+										null,
+										" "
+									)
+								),
+								_react2.default.createElement(
+									"div",
+									{ className: "col l3 s12" },
+									_react2.default.createElement(
+										"h5",
+										{ className: "white-text" },
+										"Our Projects"
+									),
+									_react2.default.createElement(
+										"ul",
+										null,
+										_react2.default.createElement(
+											"li",
+											null,
+											_react2.default.createElement(
+												"a",
+												{ className: "white-text", href: "http://www.mybusapp.co" },
+												"My Bus App"
+											)
+										),
+										_react2.default.createElement(
+											"li",
+											null,
+											_react2.default.createElement("a", { className: "white-text", href: "#!" }),
+											" "
+										),
+										_react2.default.createElement(
+											"li",
+											null,
+											_react2.default.createElement(
+												"a",
+												{ className: "white-text", href: "#!" },
+												"Agro Patterns"
+											)
+										),
+										_react2.default.createElement(
+											"li",
+											null,
+											_react2.default.createElement("a", { className: "white-text", href: "#!" })
+										)
+									)
+								)
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "footer-copyright" },
+							_react2.default.createElement(
+								"div",
+								{ className: "container" },
+								"Made by Emma Stoumen ",
+								_react2.default.createElement("a", { className: "brown-text text-lighten-3" })
+							)
+						)
+					)
+				);
+			}
+		}]);
+	
+		return Footer;
+	}(_react2.default.Component);
+	
+	module.exports = Footer;
+
+/***/ },
+/* 180 */
+/*!**************************************!*\
+  !*** ./app/components/BackToTop.jsx ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var BackToTop = function (_React$Component) {
+		_inherits(BackToTop, _React$Component);
+	
+		function BackToTop() {
+			_classCallCheck(this, BackToTop);
+	
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(BackToTop).apply(this, arguments));
+		}
+	
+		_createClass(BackToTop, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"div",
+					{ className: "fixed-action-btn hide-on-small-only" },
+					_react2.default.createElement(
+						"a",
+						{ href: "#top", className: "btn-floating btn-large waves-effect waves-light orange" },
+						_react2.default.createElement(
+							"i",
+							{ className: "large material-icons" },
+							"navigation"
+						)
+					)
+				);
+			}
+		}]);
+	
+		return BackToTop;
+	}(_react2.default.Component);
+	
+	module.exports = BackToTop;
+
+/***/ },
+/* 181 */
+/*!*******************************************!*\
+  !*** ./app/components/LanguateButton.jsx ***!
+  \*******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var LanguateButton = function (_React$Component) {
+		_inherits(LanguateButton, _React$Component);
+	
+		function LanguateButton() {
+			_classCallCheck(this, LanguateButton);
+	
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(LanguateButton).apply(this, arguments));
+		}
+	
+		_createClass(LanguateButton, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement("div", { className: "" });
+			}
+		}]);
+	
+		return LanguateButton;
+	}(_react2.default.Component);
+	
+	module.exports = LanguateButton;
 
 /***/ }
 /******/ ]);
