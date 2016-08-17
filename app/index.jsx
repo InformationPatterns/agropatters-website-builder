@@ -15,7 +15,7 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      lang: 'es'
+      lang: 'en'
     }
   }
   render () {
@@ -34,9 +34,5 @@ class App extends React.Component {
     this.setState({lang})
   }
 }
-
-
-
-
 
 render(<App/>, document.getElementById('app'));
