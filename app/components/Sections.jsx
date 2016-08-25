@@ -2,20 +2,25 @@ import React from 'react';
 
 class Sections extends React.Component {
 	render () {
-		return(<div>
-			<div id={this.props.className} className={`${this.props.className} valign-wrapper most-screen`}></div>
-		  <div className="container quarter-screen">
-		    <div className="section">
-		      <div className="row">
-		        <div className="col s12 center teal-text">
-		        <h4>{this.props.title}</h4>
-		          <h3><i className="mdi-content-send brown-text"></i></h3>
-		          <p className="center-align light font-size-large"> {this.props.content}</p>
+		return(
+		  <div id={this.props.id} className="section">
+		        <div className="section-content">
+		        	<h4 >
+								{this.props.title}
+							</h4>
+		          <p className="large-font font-style">
+								{this.props.content}
+							</p>
+							{this.props.google ?
+								<div className="googleButtonWrapper">
+									<img className='googleButton' src={this.props.google} />
+								</div>
+							: null}
 		        </div>
-		      </div>
-		    </div>
-		  </div>
-		</div>)
+						<div className='mockImage'>
+							<img src={this.props.img} />
+						</div>
+		  </div>)
 	}
 }
 

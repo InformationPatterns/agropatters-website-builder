@@ -7,27 +7,30 @@ module.exports = T9n
 
 const en = {
 	header: {
-		title: 'Information Patterns',
-		subTitle: 'We Are a Software Development Company',
-		contactUs: 'Contact Us',
-		appText: 'Apps and Hardware',
-		infoText: 'Information Sharing',
-		dataText: 'Data Visualization'
+		title: 'We accompany him on all protection activities in cultivation',
+		tabOne: 'Inspection',
+		tabTwo: 'Monitoring',
+		tabThree: 'Protection',
+		tabFour: 'Deposit',
 	},
-	app: {
-		title: 'Applications, Content and Sensors',
-		content: 'We build apps that help people capture and display data easily. These apps are connected to third party data providers and to sensors that send out detailed information about specific environmental conditions. The result is a comprehensive model of reality built by the multiple participants that are constantly observing the',
-		className: 'segment-apps'
+	client: {
+		title: 'Field Inspection',
+		content: 'The smartphone is the tool to record vegetel health indicators in the crop. When there is Internet access, this information is transmitted stored in the cloud.',
+		id: 'segment-client',
+		img: '/images/phone.png',
+		google: '/images/googleEN.png'
 	},
-	share: {
-		title: 'Information Sharing',
-		content: 'Collaboration is a key component of our software solutions. Each person that uses our solutions adds valuable information and benefits from the information provided by others. The collaborative approach to building datasets opens countless opportunities to all those interested in understanding different subject matters. The collaborative approach that we have taken has proven to be invaluable in our solutions for transportation and agriculture.',
-		className: 'segment-share'
+	monitor: {
+		title: 'Constant Monitoring',
+		content: 'Monitoring Map is your daily Supplied tools is its control plant health issues. At any time and from anywhere you can get the latest information on the presence and servidad of pests and diseases in cultivation.',
+		id: 'segment-monitor',
+		img: '/images/reports.png'
 	},
-	data: {
-		title: 'Data Visualization',
-		content: 'We deliver useful information in novel ways, by taking advantage of visualizations such as thematic maps, charts and graphs and dashboards. These visual tools summarize the big data repositories that are critical to the definition and identification of information patterns, that constantly change both spatially and through time.',
-		className: 'segment-data'
+	report: {
+		title: 'Protection and Prevention',
+		content: 'Historical reports such as incidence and severity allow us to study the effectiveness of protection and prevention activities. Making decisions based on information is the key to maintaining the highest quality at all times.',
+		id: 'segment-report',
+		img: '/images/reports.png'
 	},
   footer: {
     bioTitle: 'Company Bio',
@@ -42,27 +45,31 @@ const en = {
 
 const es = {
   header: {
-		title: '',
+		title: 'Lo acompañamos en todas las actividades de protección e su cultivo',
 		subTitle: '',
-		contactUs: '',
-		appText: '',
-		infoText: '',
-		dataText: ''
+		tabOne: 'Inspección',
+		tabTwo: 'Monitorio',
+		tabThree: 'Protección',
+		tabFour: 'Ingresar',
 	},
-	app: {
-		title: '',
-		content: '',
-		className: 'segment-apps'
+	client: {
+		title: 'Inspección en Campo',
+		content: 'El teléfono intelegente es la herramienta para registrar los indicadores de sanidad vegetel en el cultivo. Cuando exista acceso a Internet, esta información es transmitida  almacenada en la nube.',
+		id: 'segment-client',
+		img: '/images/phone.png',
+		google: '/images/googleES.png'
 	},
-	share: {
-		title: '',
-		content: '',
-		className: 'segment-share'
+	monitor: {
+		title: 'Monitoreo Constante',
+		content: 'El Mapa de Monitoreo es su herrmienta es su control diario en temas de sanidad vegetal. En todo momento y desde cualquier lugar puede obtener la información más actualizada sobre la presencia y servidad de plagas y enfermedades en su cultivo.',
+		id: 'segment-monitor',
+		img: '/images/reports.png'
 	},
-	data: {
-		title: '',
-		content: '',
-		className: 'segment-data'
+	report: {
+		title: 'Protección y Prevención',
+		content: 'Reportes históricos como los de Incidencia y Severidad permiten estudiar la eficacia de las actividades de protección y prevención. La toma de decisiones con base en información es la clave para mantener una altísima calidad en todo momento.',
+		id: 'segment-report',
+		img: '/images/reports.png'
 	},
   footer: {
     bioTitle: '',

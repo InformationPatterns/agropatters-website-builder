@@ -6,7 +6,7 @@ class LanguageButton extends React.Component {
     else if (this.props.lang == 'en') return 'Español'
   }
 	render () {
-		return(<div onClick={this.toggle.bind(this)} className="waves-effect waves-light btn language-button">
+		return(<div onClick={this.toggle.bind(this)} className="waves-effect waves-light btn language-button red lighten-2">
       {this.lang()}
     </div>)
 	}

@@ -15,16 +15,16 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      lang: 'en'
+      lang: 'es'
     }
   }
   render () {
     let lang = this.state.lang
     return (<div id="top">
     	<Header {...T9n('header', lang)} />
-    	<Sections {...T9n('app', lang)} />
-			<Sections {...T9n('share', lang)} />
-			<Sections {...T9n('data', lang)} />
+    	<Sections {...T9n('client', lang)} />
+			<Sections {...T9n('monitor', lang)} />
+			<Sections {...T9n('report', lang)} />
 			<Footer {...T9n('footer', lang)} />
       <LanguageButton lang={lang} onChange={this.onChange.bind(this)} {...T9n('languageButton', lang)} />
 			<BackToTop />

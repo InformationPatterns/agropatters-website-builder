@@ -79,7 +79,7 @@
 	
 	var _BackToTop2 = _interopRequireDefault(_BackToTop);
 	
-	var _LanguageButton = __webpack_require__(/*! ./components/LanguageButton.jsx */ 181);
+	var _LanguageButton = __webpack_require__(/*! ./components/LanguageButton.jsx */ 180);
 	
 	var _LanguageButton2 = _interopRequireDefault(_LanguageButton);
 	
@@ -113,9 +113,9 @@
 	        'div',
 	        { id: 'top' },
 	        _react2.default.createElement(_Header2.default, (0, _translations2.default)('header', lang)),
-	        _react2.default.createElement(_Sections2.default, (0, _translations2.default)('app', lang)),
-	        _react2.default.createElement(_Sections2.default, (0, _translations2.default)('share', lang)),
-	        _react2.default.createElement(_Sections2.default, (0, _translations2.default)('data', lang)),
+	        _react2.default.createElement(_Sections2.default, (0, _translations2.default)('client', lang)),
+	        _react2.default.createElement(_Sections2.default, (0, _translations2.default)('monitor', lang)),
+	        _react2.default.createElement(_Sections2.default, (0, _translations2.default)('report', lang)),
 	        _react2.default.createElement(_Footer2.default, (0, _translations2.default)('footer', lang)),
 	        _react2.default.createElement(_LanguageButton2.default, _extends({ lang: lang, onChange: this.onChange.bind(this) }, (0, _translations2.default)('languageButton', lang))),
 	        _react2.default.createElement(_BackToTop2.default, null)
@@ -22077,27 +22077,30 @@
 	
 	var en = {
 		header: {
-			title: 'Information Patterns',
-			subTitle: 'We Are a Software Development Company',
-			contactUs: 'Contact Us',
-			appText: 'Apps and Hardware',
-			infoText: 'Information Sharing',
-			dataText: 'Data Visualization'
+			title: 'We accompany him on all protection activities in cultivation',
+			tabOne: 'Inspection',
+			tabTwo: 'Monitoring',
+			tabThree: 'Protection',
+			tabFour: 'Deposit'
 		},
-		app: {
-			title: 'Applications, Content and Sensors',
-			content: 'We build apps that help people capture and display data easily. These apps are connected to third party data providers and to sensors that send out detailed information about specific environmental conditions. The result is a comprehensive model of reality built by the multiple participants that are constantly observing the',
-			className: 'segment-apps'
+		client: {
+			title: 'Field Inspection',
+			content: 'The smartphone is the tool to record vegetel health indicators in the crop. When there is Internet access, this information is transmitted stored in the cloud.',
+			id: 'segment-client',
+			img: '/images/phone.png',
+			google: '/images/googleEN.png'
 		},
-		share: {
-			title: 'Information Sharing',
-			content: 'Collaboration is a key component of our software solutions. Each person that uses our solutions adds valuable information and benefits from the information provided by others. The collaborative approach to building datasets opens countless opportunities to all those interested in understanding different subject matters. The collaborative approach that we have taken has proven to be invaluable in our solutions for transportation and agriculture.',
-			className: 'segment-share'
+		monitor: {
+			title: 'Constant Monitoring',
+			content: 'Monitoring Map is your daily Supplied tools is its control plant health issues. At any time and from anywhere you can get the latest information on the presence and servidad of pests and diseases in cultivation.',
+			id: 'segment-monitor',
+			img: '/images/reports.png'
 		},
-		data: {
-			title: 'Data Visualization',
-			content: 'We deliver useful information in novel ways, by taking advantage of visualizations such as thematic maps, charts and graphs and dashboards. These visual tools summarize the big data repositories that are critical to the definition and identification of information patterns, that constantly change both spatially and through time.',
-			className: 'segment-data'
+		report: {
+			title: 'Protection and Prevention',
+			content: 'Historical reports such as incidence and severity allow us to study the effectiveness of protection and prevention activities. Making decisions based on information is the key to maintaining the highest quality at all times.',
+			id: 'segment-report',
+			img: '/images/reports.png'
 		},
 		footer: {
 			bioTitle: 'Company Bio',
@@ -22112,27 +22115,31 @@
 	
 	var es = {
 		header: {
-			title: '',
+			title: 'Lo acompañamos en todas las actividades de protección e su cultivo',
 			subTitle: '',
-			contactUs: '',
-			appText: '',
-			infoText: '',
-			dataText: ''
+			tabOne: 'Inspección',
+			tabTwo: 'Monitorio',
+			tabThree: 'Protección',
+			tabFour: 'Ingresar'
 		},
-		app: {
-			title: '',
-			content: '',
-			className: 'segment-apps'
+		client: {
+			title: 'Inspección en Campo',
+			content: 'El teléfono intelegente es la herramienta para registrar los indicadores de sanidad vegetel en el cultivo. Cuando exista acceso a Internet, esta información es transmitida  almacenada en la nube.',
+			id: 'segment-client',
+			img: '/images/phone.png',
+			google: '/images/googleES.png'
 		},
-		share: {
-			title: '',
-			content: '',
-			className: 'segment-share'
+		monitor: {
+			title: 'Monitoreo Constante',
+			content: 'El Mapa de Monitoreo es su herrmienta es su control diario en temas de sanidad vegetal. En todo momento y desde cualquier lugar puede obtener la información más actualizada sobre la presencia y servidad de plagas y enfermedades en su cultivo.',
+			id: 'segment-monitor',
+			img: '/images/reports.png'
 		},
-		data: {
-			title: '',
-			content: '',
-			className: 'segment-data'
+		report: {
+			title: 'Protección y Prevención',
+			content: 'Reportes históricos como los de Incidencia y Severidad permiten estudiar la eficacia de las actividades de protección y prevención. La toma de decisiones con base en información es la clave para mantener una altísima calidad en todo momento.',
+			id: 'segment-report',
+			img: '/images/reports.png'
 		},
 		footer: {
 			bioTitle: '',
@@ -22152,7 +22159,7 @@
   \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -22178,137 +22185,74 @@
 		}
 	
 		_createClass(Header, [{
-			key: "render",
+			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
-					"div",
-					null,
+					'div',
+					{ id: 'segment-header' },
 					_react2.default.createElement(
-						"div",
-						{ id: "index-banner", className: "segment-header large-screen" },
+						'nav',
+						{ className: 'z-depth-0' },
 						_react2.default.createElement(
-							"div",
-							{ className: "section" },
+							'div',
+							{ className: 'nav-wrapper' },
 							_react2.default.createElement(
-								"div",
-								{ className: "container" },
-								_react2.default.createElement("br", null),
+								'ul',
+								{ className: 'left hide-on-small-only' },
 								_react2.default.createElement(
-									"h1",
-									{ className: "header center teal-text text-darken-3 white-glow" },
-									this.props.title
-								),
-								_react2.default.createElement(
-									"div",
-									{ className: "row center" },
+									'li',
+									{ className: 'brand' },
+									_react2.default.createElement('img', { src: '/images/icon.png' }),
 									_react2.default.createElement(
-										"h5",
-										{ className: "header col s12 light teal-text text-darken-3 white-glow" },
-										this.props.subTitle
+										'b',
+										null,
+										'AgroPatterns'
 									)
 								),
 								_react2.default.createElement(
-									"div",
-									{ className: "row center hide-on-small-only" },
+									'li',
+									null,
 									_react2.default.createElement(
-										"a",
-										{ id: "download-button", className: "btn-large waves-effect waves-light orange ", href: "mailto:gabriel.coch@infopatterns.com?Subject=Contact%20InfoPatterns" },
-										this.props.contactUs
-									)
-								),
-								_react2.default.createElement("br", null)
-							)
-						)
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "container small-screen" },
-						_react2.default.createElement(
-							"div",
-							{ className: "section" },
-							_react2.default.createElement(
-								"div",
-								{ className: "row" },
-								_react2.default.createElement(
-									"a",
-									{ href: "#segment-apps", className: "col s4" },
-									_react2.default.createElement(
-										"div",
-										{ className: "icon-block" },
-										_react2.default.createElement(
-											"h2",
-											{ className: "center" },
-											_react2.default.createElement(
-												"div",
-												{ className: "btn-floating btn-large waves-effect waves-light orange" },
-												_react2.default.createElement(
-													"i",
-													{ className: "material-icons" },
-													"phonelink_ring"
-												)
-											)
-										),
-										_react2.default.createElement(
-											"h5",
-											{ className: "center teal-text hide-on-small-only" },
-											this.props.appText
-										)
+										'a',
+										{ href: '#segment-client' },
+										this.props.tabOne
 									)
 								),
 								_react2.default.createElement(
-									"a",
-									{ href: "#segment-share", className: "col s4" },
+									'li',
+									null,
 									_react2.default.createElement(
-										"div",
-										{ className: "icon-block" },
-										_react2.default.createElement(
-											"h2",
-											{ className: "center" },
-											_react2.default.createElement(
-												"div",
-												{ className: "btn-floating btn-large waves-effect waves-light orange" },
-												_react2.default.createElement(
-													"i",
-													{ className: "material-icons" },
-													"view_quilt"
-												)
-											)
-										),
-										_react2.default.createElement(
-											"h5",
-											{ className: "center teal-text hide-on-small-only" },
-											this.props.infoText
-										)
+										'a',
+										{ href: '#segment-monitor' },
+										this.props.tabTwo
 									)
 								),
 								_react2.default.createElement(
-									"a",
-									{ href: "#segment-data", className: "col s4" },
+									'li',
+									null,
 									_react2.default.createElement(
-										"div",
-										{ className: "icon-block" },
-										_react2.default.createElement(
-											"h2",
-											{ className: "center" },
-											_react2.default.createElement(
-												"div",
-												{ className: "btn-floating btn-large waves-effect waves-light orange" },
-												_react2.default.createElement(
-													"i",
-													{ className: "material-icons" },
-													"equalizer"
-												)
-											)
-										),
-										_react2.default.createElement(
-											"h5",
-											{ className: "center teal-text hide-on-small-only" },
-											this.props.dataText
-										)
+										'a',
+										{ href: '#segment-report' },
+										this.props.tabThree
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									_react2.default.createElement(
+										'a',
+										{ href: 'https://www.agropatterns.com/', target: '_blank' },
+										this.props.tabFour
 									)
 								)
 							)
 						)
+					),
+					_react2.default.createElement('div', { className: 'fill' }),
+					_react2.default.createElement(
+						'h1',
+						{ className: 'white-text' },
+						this.props.title
 					)
 				);
 			}
@@ -22343,58 +22287,49 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var Sections = function (_React$Component) {
-			_inherits(Sections, _React$Component);
+		_inherits(Sections, _React$Component);
 	
-			function Sections() {
-					_classCallCheck(this, Sections);
+		function Sections() {
+			_classCallCheck(this, Sections);
 	
-					return _possibleConstructorReturn(this, Object.getPrototypeOf(Sections).apply(this, arguments));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Sections).apply(this, arguments));
+		}
+	
+		_createClass(Sections, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"div",
+					{ id: this.props.id, className: "section" },
+					_react2.default.createElement(
+						"div",
+						{ className: "section-content" },
+						_react2.default.createElement(
+							"h4",
+							null,
+							this.props.title
+						),
+						_react2.default.createElement(
+							"p",
+							{ className: "large-font font-style" },
+							this.props.content
+						),
+						this.props.google ? _react2.default.createElement(
+							"div",
+							{ className: "googleButtonWrapper" },
+							_react2.default.createElement("img", { className: "googleButton", src: this.props.google })
+						) : null
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "mockImage" },
+						_react2.default.createElement("img", { src: this.props.img })
+					)
+				);
 			}
+		}]);
 	
-			_createClass(Sections, [{
-					key: "render",
-					value: function render() {
-							return _react2.default.createElement(
-									"div",
-									null,
-									_react2.default.createElement("div", { id: this.props.className, className: this.props.className + " valign-wrapper most-screen" }),
-									_react2.default.createElement(
-											"div",
-											{ className: "container quarter-screen" },
-											_react2.default.createElement(
-													"div",
-													{ className: "section" },
-													_react2.default.createElement(
-															"div",
-															{ className: "row" },
-															_react2.default.createElement(
-																	"div",
-																	{ className: "col s12 center teal-text" },
-																	_react2.default.createElement(
-																			"h4",
-																			null,
-																			this.props.title
-																	),
-																	_react2.default.createElement(
-																			"h3",
-																			null,
-																			_react2.default.createElement("i", { className: "mdi-content-send brown-text" })
-																	),
-																	_react2.default.createElement(
-																			"p",
-																			{ className: "center-align light font-size-large" },
-																			" ",
-																			this.props.content
-																	)
-															)
-													)
-											)
-									)
-							);
-					}
-			}]);
-	
-			return Sections;
+		return Sections;
 	}(_react2.default.Component);
 	
 	module.exports = Sections;
@@ -22611,7 +22546,7 @@
 					{ className: "fixed-action-btn hide-on-small-only" },
 					_react2.default.createElement(
 						"a",
-						{ href: "#top", className: "btn-floating btn-large waves-effect waves-light orange" },
+						{ href: "#top", className: "btn-floating btn-large waves-effect waves-light red lighten-2" },
 						_react2.default.createElement(
 							"i",
 							{ className: "large material-icons" },
@@ -22628,8 +22563,7 @@
 	module.exports = BackToTop;
 
 /***/ },
-/* 180 */,
-/* 181 */
+/* 180 */
 /*!*******************************************!*\
   !*** ./app/components/LanguageButton.jsx ***!
   \*******************************************/
@@ -22670,7 +22604,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { onClick: this.toggle.bind(this), className: 'waves-effect waves-light btn language-button' },
+	        { onClick: this.toggle.bind(this), className: 'waves-effect waves-light btn language-button red lighten-2' },
 	        this.lang()
 	      );
 	    }
