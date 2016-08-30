@@ -3,8 +3,7 @@ import React from 'react';
 class Footer extends React.Component {
 	render () {
 		return(<div>
-		  <div className="segment-footer valign-wrapper half-screen"></div>
-		  <footer className="page-footer teal">
+		  <footer className="page-footer">
 		    <div className="container">
 		      <div className="row">
 		        <div className="col l6 s12">

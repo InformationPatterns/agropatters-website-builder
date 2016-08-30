@@ -5,6 +5,7 @@ import T9n from './translations.jsx';
 
 import Header from './components/Header.jsx';
 import Sections from './components/Sections.jsx';
+import OurClients from './components/OurClients.jsx';
 import Footer from './components/Footer.jsx';
 
 import BackToTop from './components/BackToTop.jsx';
@@ -25,6 +26,8 @@ class App extends React.Component {
     	<Sections {...T9n('client', lang)} />
 			<Sections {...T9n('monitor', lang)} />
 			<Sections {...T9n('report', lang)} />
+      <OurClients {...T9n('ourClients', lang)} />
+      {/*  ??? */}
 			<Footer {...T9n('footer', lang)} />
       <LanguageButton lang={lang} onChange={this.onChange.bind(this)} {...T9n('languageButton', lang)} />
 			<BackToTop />

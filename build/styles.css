@@ -3,7 +3,7 @@
 }
 
 #segment-header {
-  background-image: url(/images/daisy.jpg);
+  background-image: url(/images/rosesTwo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
@@ -36,14 +36,27 @@
   padding: 0 3px;
 }
 
+#segment-ourClients {
+  background-color: #e09d94;
+  padding: 20px 0;
+}
+
+.segment-ourClients {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#segment-ourClients .center {
+  text-align: center;
+
+}
 
 .section {
   display: flex;
   flex-direction: row;
   align-items: center;
   vertical-align: middle;
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 100vw;
   height: 85vh;
   background-color: #e8f5e9;
@@ -60,7 +73,7 @@
 
 .mockImage img {
   max-height: 70vh;
-  max-width: 40vw;
+  max-width: 35vw;
 }
 
 .section-content {
@@ -101,4 +114,9 @@
   right: 5px;
   top: 5px;
   z-index: 1000;
+}
+
+.page-footer {
+  margin-top: 0 !important;
+  background-color: #e8f5e9 !important;
 }

@@ -71,15 +71,19 @@
 	
 	var _Sections2 = _interopRequireDefault(_Sections);
 	
-	var _Footer = __webpack_require__(/*! ./components/Footer.jsx */ 178);
+	var _OurClients = __webpack_require__(/*! ./components/OurClients.jsx */ 178);
+	
+	var _OurClients2 = _interopRequireDefault(_OurClients);
+	
+	var _Footer = __webpack_require__(/*! ./components/Footer.jsx */ 179);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
-	var _BackToTop = __webpack_require__(/*! ./components/BackToTop.jsx */ 179);
+	var _BackToTop = __webpack_require__(/*! ./components/BackToTop.jsx */ 180);
 	
 	var _BackToTop2 = _interopRequireDefault(_BackToTop);
 	
-	var _LanguageButton = __webpack_require__(/*! ./components/LanguageButton.jsx */ 180);
+	var _LanguageButton = __webpack_require__(/*! ./components/LanguageButton.jsx */ 181);
 	
 	var _LanguageButton2 = _interopRequireDefault(_LanguageButton);
 	
@@ -116,6 +120,7 @@
 	        _react2.default.createElement(_Sections2.default, (0, _translations2.default)('client', lang)),
 	        _react2.default.createElement(_Sections2.default, (0, _translations2.default)('monitor', lang)),
 	        _react2.default.createElement(_Sections2.default, (0, _translations2.default)('report', lang)),
+	        _react2.default.createElement(_OurClients2.default, (0, _translations2.default)('ourClients', lang)),
 	        _react2.default.createElement(_Footer2.default, (0, _translations2.default)('footer', lang)),
 	        _react2.default.createElement(_LanguageButton2.default, _extends({ lang: lang, onChange: this.onChange.bind(this) }, (0, _translations2.default)('languageButton', lang))),
 	        _react2.default.createElement(_BackToTop2.default, null)
@@ -22081,7 +22086,7 @@
 			tabOne: 'Inspection',
 			tabTwo: 'Monitoring',
 			tabThree: 'Protection',
-			tabFour: 'Deposit'
+			tabFour: 'Sign In'
 		},
 		client: {
 			title: 'Field Inspection',
@@ -22101,6 +22106,12 @@
 			content: 'Historical reports such as incidence and severity allow us to study the effectiveness of protection and prevention activities. Making decisions based on information is the key to maintaining the highest quality at all times.',
 			id: 'segment-report',
 			img: '/images/reports.png'
+		},
+		ourClients: {
+			title: 'Our Commitment to Floricultores',
+			content: 'We fifteen years implementing solutions for crop protection and we have prestigious institutions that recognize the benefit obtained by using our shiny technology.',
+			subTitle: 'Our Customers',
+			img: '/images/clients.jpg'
 		},
 		footer: {
 			bioTitle: 'Company Bio',
@@ -22140,6 +22151,12 @@
 			content: 'Reportes históricos como los de Incidencia y Severidad permiten estudiar la eficacia de las actividades de protección y prevención. La toma de decisiones con base en información es la clave para mantener una altísima calidad en todo momento.',
 			id: 'segment-report',
 			img: '/images/reports.png'
+		},
+		ourClients: {
+			title: 'Nuestro Compromiso con los Floricultores',
+			content: 'Llevamos quince años implementando soluciones para la protección de cultivos y contamos con prestigiosas entidades que reconocen el beneficio que obtienen al usar nestra tecnología',
+			subTitle: 'Algunos de Nuestros Clientes',
+			img: '/images/clients.jpg'
 		},
 		footer: {
 			bioTitle: '',
@@ -22367,6 +22384,73 @@
 
 /***/ },
 /* 178 */
+/*!***************************************!*\
+  !*** ./app/components/OurClients.jsx ***!
+  \***************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var OurClients = function (_React$Component) {
+	  _inherits(OurClients, _React$Component);
+	
+	  function OurClients() {
+	    _classCallCheck(this, OurClients);
+	
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(OurClients).apply(this, arguments));
+	  }
+	
+	  _createClass(OurClients, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'segment-ourClients' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container segment-ourClients' },
+	          _react2.default.createElement(
+	            'h5',
+	            { className: 'center' },
+	            this.props.title
+	          ),
+	          _react2.default.createElement(
+	            'h6',
+	            { className: 'center' },
+	            this.props.content
+	          ),
+	          _react2.default.createElement(
+	            'h5',
+	            null,
+	            this.props.subTitle
+	          ),
+	          _react2.default.createElement('img', { src: this.props.img })
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return OurClients;
+	}(_react2.default.Component);
+	
+	module.exports = OurClients;
+
+/***/ },
+/* 179 */
 /*!***********************************!*\
   !*** ./app/components/Footer.jsx ***!
   \***********************************/
@@ -22403,10 +22487,9 @@
 				return _react2.default.createElement(
 					"div",
 					null,
-					_react2.default.createElement("div", { className: "segment-footer valign-wrapper half-screen" }),
 					_react2.default.createElement(
 						"footer",
-						{ className: "page-footer teal" },
+						{ className: "page-footer" },
 						_react2.default.createElement(
 							"div",
 							{ className: "container" },
@@ -22507,7 +22590,7 @@
 	module.exports = Footer;
 
 /***/ },
-/* 179 */
+/* 180 */
 /*!**************************************!*\
   !*** ./app/components/BackToTop.jsx ***!
   \**************************************/
@@ -22563,7 +22646,7 @@
 	module.exports = BackToTop;
 
 /***/ },
-/* 180 */
+/* 181 */
 /*!*******************************************!*\
   !*** ./app/components/LanguageButton.jsx ***!
   \*******************************************/

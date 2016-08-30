@@ -11,7 +11,7 @@ const en = {
 		tabOne: 'Inspection',
 		tabTwo: 'Monitoring',
 		tabThree: 'Protection',
-		tabFour: 'Deposit',
+		tabFour: 'Sign In',
 	},
 	client: {
 		title: 'Field Inspection',
@@ -31,6 +31,12 @@ const en = {
 		content: 'Historical reports such as incidence and severity allow us to study the effectiveness of protection and prevention activities. Making decisions based on information is the key to maintaining the highest quality at all times.',
 		id: 'segment-report',
 		img: '/images/reports.png'
+	},
+	ourClients: {
+		title: 'Our Commitment to Floricultores',
+		content: 'We fifteen years implementing solutions for crop protection and we have prestigious institutions that recognize the benefit obtained by using our shiny technology.',
+		subTitle: 'Our Customers',
+		img: '/images/clients.jpg'
 	},
   footer: {
     bioTitle: 'Company Bio',
@@ -70,6 +76,12 @@ const es = {
 		content: 'Reportes históricos como los de Incidencia y Severidad permiten estudiar la eficacia de las actividades de protección y prevención. La toma de decisiones con base en información es la clave para mantener una altísima calidad en todo momento.',
 		id: 'segment-report',
 		img: '/images/reports.png'
+	},
+	ourClients: {
+		title: 'Nuestro Compromiso con los Floricultores',
+		content: 'Llevamos quince años implementando soluciones para la protección de cultivos y contamos con prestigiosas entidades que reconocen el beneficio que obtienen al usar nestra tecnología',
+		subTitle: 'Algunos de Nuestros Clientes',
+		img: '/images/clients.jpg'
 	},
   footer: {
     bioTitle: '',
