@@ -1,38 +1,59 @@
 import React from 'react';
 
 class Footer extends React.Component {
-	render () {
-		return(<div>
-		  <footer className="page-footer">
-		    <div className="container">
-		      <div className="row">
-		        <div className="col l6 s12">
-		          <h5 className="white-text">{this.props.bioTitle}</h5>
-		          <p className="grey-text text-lighten-4">{this.props.bioContent}</p>
-		          <a className="grey-text text-lighten-1" href="mailto:gabriel.coch@infopatterns.com?Subject=Contact%20InfoPatterns">gabriel.coch@infopatterns.com</a>
-		        </div>
-		        <div className="col l3 s12">
-		        <h1> </h1>
-		        </div>
+	componentDidUpdate() {
+		// Materialize.updateTextFields();
+	}
+	render() {
+		return(<footer id="segment-footer" className="page-footer">
+					<div className="container contactTitle blue-grey-text">
+     				<h5>{this.props.contactTitle}</h5>
+     			</div>
+					<div className="container contact">
 
-		        <div className="col l3 s12">
-		          <h5 className="white-text">{this.props.projects}</h5>
+							<form className="contact-form" action="//formspree.io/cmtoups@me.com" method="POST">
+								<div className="input-field">
+									<input name="name" id="name" type="text" />
+									<label htmlFor="name" className="">{this.props.name}</label>
+								</div>
+
+								<div className="input-field">
+									<input name="email" id="email" type="text" />
+									<label htmlFor="email" className="">{this.props.email}</label>
+								</div>
+
+								<div className="input-field">
+									<textarea name="body" id="message" type="text" className="materialize-textarea"/>
+									<label htmlFor="message" className="">{this.props.message}</label>
+								</div>
+								<div className="button">
+									<input  type="submit" className="waves-effect waves-light btn red lighten-2" value={this.props.button} />
+								</div>
+							</form>
+
+						<div className="contact-list">
 		          <ul>
-		            <li><a className="white-text" href="http://www.mybusapp.co">My Bus App</a></li>
-		            <li><a className="white-text" href="#!"></a> </li>
-		            <li><a className="white-text" href="#!">Agro Patterns</a></li>
-		            <li><a className="white-text" href="#!"></a></li>
+		            <li className="icon-list-item">
+									<i className="material-icons list-icon red-text text-lighten-2">room</i>
+									<a className="grey-text">Calle 125 No.19 - 89 Ofc.502 Bogotá, Colombia</a>
+								</li>
+		            <li className="icon-list-item">
+								<i className="material-icons list-icon red-text text-lighten-2">email</i>
+									<a className="grey-text">agroskan@mapasydatos.com</a>
+								</li>
+		            <li className="icon-list-item">
+									<i className="material-icons list-icon red-text text-lighten-2">phone</i>
+									<a className="grey-text">571.638.1073</a>
+								</li>
 		          </ul>
 		        </div>
 		      </div>
-		    </div>
 		    <div className="footer-copyright">
-		      <div className="container">
-		      {this.props.madeBy} Emma Stoumen <a className="brown-text text-lighten-3"></a>
+		      <div className="container grey-text">
+		      {this.props.madeBy} Emma Stoumen
 		      </div>
 		    </div>
-		  </footer>
-		</div>)
+		  </footer>)
 	}
 }
 

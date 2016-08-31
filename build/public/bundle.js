@@ -22086,7 +22086,8 @@
 			tabOne: 'Inspection',
 			tabTwo: 'Monitoring',
 			tabThree: 'Protection',
-			tabFour: 'Sign In'
+			tabFour: 'Sign In',
+			tabFive: 'Contact Us'
 		},
 		client: {
 			title: 'Field Inspection',
@@ -22114,10 +22115,11 @@
 			img: '/images/clients.jpg'
 		},
 		footer: {
-			bioTitle: 'Company Bio',
-			bioContent: 'Information Patterns is a pioneer in collaboration and visual display of information. It has developed and built solutions that have been successfully deployed worldwide using best-of- breed technologies.',
-			projects: 'Our Projects',
-			madeBy: 'Made by'
+			madeBy: 'Made by',
+			contactTitle: 'Contact Us', name: "Name",
+			email: 'Email',
+			message: 'Message',
+			button: 'Submit'
 		},
 		languageButton: {
 			language: 'Language'
@@ -22131,7 +22133,8 @@
 			tabOne: 'Inspección',
 			tabTwo: 'Monitorio',
 			tabThree: 'Protección',
-			tabFour: 'Ingresar'
+			tabFour: 'Ingresar',
+			tabFive: 'Contáctenos'
 		},
 		client: {
 			title: 'Inspección en Campo',
@@ -22159,10 +22162,12 @@
 			img: '/images/clients.jpg'
 		},
 		footer: {
-			bioTitle: '',
-			bioContent: '',
-			projects: '',
-			madeBy: ''
+			madeBy: 'Hecho por',
+			contactTitle: 'Contáctenos',
+			name: "Nombre",
+			email: 'Correo Electónico',
+			message: 'Comentario',
+			button: 'Enviar'
 		},
 		languageButton: {
 			language: ''
@@ -22258,6 +22263,15 @@
 									null,
 									_react2.default.createElement(
 										'a',
+										{ href: '#segment-footer' },
+										this.props.tabFive
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									_react2.default.createElement(
+										'a',
 										{ href: 'https://www.agropatterns.com/', target: '_blank' },
 										this.props.tabFour
 									)
@@ -22320,7 +22334,7 @@
 					{ id: this.props.id, className: "section" },
 					_react2.default.createElement(
 						"div",
-						{ className: "section-content" },
+						{ className: "section-content green-text text-darken-4" },
 						_react2.default.createElement(
 							"h4",
 							null,
@@ -22328,7 +22342,7 @@
 						),
 						_react2.default.createElement(
 							"p",
-							{ className: "large-font font-style" },
+							{ className: "large-font font-style green-text text-darken-4" },
 							this.props.content
 						),
 						this.props.google ? _react2.default.createElement(
@@ -22422,7 +22436,7 @@
 	        { id: 'segment-ourClients' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'container segment-ourClients' },
+	          { className: 'container segment-ourClients white-text' },
 	          _react2.default.createElement(
 	            'h5',
 	            { className: 'center' },
@@ -22482,102 +22496,126 @@
 		}
 	
 		_createClass(Footer, [{
+			key: "componentDidUpdate",
+			value: function componentDidUpdate() {
+				// Materialize.updateTextFields();
+			}
+		}, {
 			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					"div",
-					null,
+					"footer",
+					{ id: "segment-footer", className: "page-footer" },
 					_react2.default.createElement(
-						"footer",
-						{ className: "page-footer" },
+						"div",
+						{ className: "container contactTitle blue-grey-text" },
 						_react2.default.createElement(
-							"div",
-							{ className: "container" },
+							"h5",
+							null,
+							this.props.contactTitle
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "container contact" },
+						_react2.default.createElement(
+							"form",
+							{ className: "contact-form", action: "//formspree.io/cmtoups@me.com", method: "POST" },
 							_react2.default.createElement(
 								"div",
-								{ className: "row" },
+								{ className: "input-field" },
+								_react2.default.createElement("input", { name: "name", id: "name", type: "text" }),
 								_react2.default.createElement(
-									"div",
-									{ className: "col l6 s12" },
-									_react2.default.createElement(
-										"h5",
-										{ className: "white-text" },
-										this.props.bioTitle
-									),
-									_react2.default.createElement(
-										"p",
-										{ className: "grey-text text-lighten-4" },
-										this.props.bioContent
-									),
-									_react2.default.createElement(
-										"a",
-										{ className: "grey-text text-lighten-1", href: "mailto:gabriel.coch@infopatterns.com?Subject=Contact%20InfoPatterns" },
-										"gabriel.coch@infopatterns.com"
-									)
-								),
-								_react2.default.createElement(
-									"div",
-									{ className: "col l3 s12" },
-									_react2.default.createElement(
-										"h1",
-										null,
-										" "
-									)
-								),
-								_react2.default.createElement(
-									"div",
-									{ className: "col l3 s12" },
-									_react2.default.createElement(
-										"h5",
-										{ className: "white-text" },
-										this.props.projects
-									),
-									_react2.default.createElement(
-										"ul",
-										null,
-										_react2.default.createElement(
-											"li",
-											null,
-											_react2.default.createElement(
-												"a",
-												{ className: "white-text", href: "http://www.mybusapp.co" },
-												"My Bus App"
-											)
-										),
-										_react2.default.createElement(
-											"li",
-											null,
-											_react2.default.createElement("a", { className: "white-text", href: "#!" }),
-											" "
-										),
-										_react2.default.createElement(
-											"li",
-											null,
-											_react2.default.createElement(
-												"a",
-												{ className: "white-text", href: "#!" },
-												"Agro Patterns"
-											)
-										),
-										_react2.default.createElement(
-											"li",
-											null,
-											_react2.default.createElement("a", { className: "white-text", href: "#!" })
-										)
-									)
+									"label",
+									{ htmlFor: "name", className: "" },
+									this.props.name
 								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "input-field" },
+								_react2.default.createElement("input", { name: "email", id: "email", type: "text" }),
+								_react2.default.createElement(
+									"label",
+									{ htmlFor: "email", className: "" },
+									this.props.email
+								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "input-field" },
+								_react2.default.createElement("textarea", { name: "body", id: "message", type: "text", className: "materialize-textarea" }),
+								_react2.default.createElement(
+									"label",
+									{ htmlFor: "message", className: "" },
+									this.props.message
+								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "button" },
+								_react2.default.createElement("input", { type: "submit", className: "waves-effect waves-light btn red lighten-2", value: this.props.button })
 							)
 						),
 						_react2.default.createElement(
 							"div",
-							{ className: "footer-copyright" },
+							{ className: "contact-list" },
 							_react2.default.createElement(
-								"div",
-								{ className: "container" },
-								this.props.madeBy,
-								" Emma Stoumen ",
-								_react2.default.createElement("a", { className: "brown-text text-lighten-3" })
+								"ul",
+								null,
+								_react2.default.createElement(
+									"li",
+									{ className: "icon-list-item" },
+									_react2.default.createElement(
+										"i",
+										{ className: "material-icons list-icon red-text text-lighten-2" },
+										"room"
+									),
+									_react2.default.createElement(
+										"a",
+										{ className: "grey-text" },
+										"Calle 125 No.19 - 89 Ofc.502 Bogotá, Colombia"
+									)
+								),
+								_react2.default.createElement(
+									"li",
+									{ className: "icon-list-item" },
+									_react2.default.createElement(
+										"i",
+										{ className: "material-icons list-icon red-text text-lighten-2" },
+										"email"
+									),
+									_react2.default.createElement(
+										"a",
+										{ className: "grey-text" },
+										"agroskan@mapasydatos.com"
+									)
+								),
+								_react2.default.createElement(
+									"li",
+									{ className: "icon-list-item" },
+									_react2.default.createElement(
+										"i",
+										{ className: "material-icons list-icon red-text text-lighten-2" },
+										"phone"
+									),
+									_react2.default.createElement(
+										"a",
+										{ className: "grey-text" },
+										"571.638.1073"
+									)
+								)
 							)
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "footer-copyright" },
+						_react2.default.createElement(
+							"div",
+							{ className: "container grey-text" },
+							this.props.madeBy,
+							" Emma Stoumen"
 						)
 					)
 				);

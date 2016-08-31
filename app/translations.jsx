@@ -12,6 +12,7 @@ const en = {
 		tabTwo: 'Monitoring',
 		tabThree: 'Protection',
 		tabFour: 'Sign In',
+		tabFive: 'Contact Us'
 	},
 	client: {
 		title: 'Field Inspection',
@@ -39,10 +40,11 @@ const en = {
 		img: '/images/clients.jpg'
 	},
   footer: {
-    bioTitle: 'Company Bio',
-    bioContent: 'Information Patterns is a pioneer in collaboration and visual display of information. It has developed and built solutions that have been successfully deployed worldwide using best-of- breed technologies.',
-    projects: 'Our Projects',
-    madeBy: 'Made by'
+		madeBy: 'Made by',
+		contactTitle: 'Contact Us',name: "Name",
+		email: 'Email',
+		message: 'Message',
+		button: 'Submit'
   },
   languageButton: {
     language: 'Language'
@@ -57,6 +59,7 @@ const es = {
 		tabTwo: 'Monitorio',
 		tabThree: 'Protección',
 		tabFour: 'Ingresar',
+		tabFive: 'Contáctenos'
 	},
 	client: {
 		title: 'Inspección en Campo',
@@ -84,10 +87,12 @@ const es = {
 		img: '/images/clients.jpg'
 	},
   footer: {
-    bioTitle: '',
-    bioContent: '',
-    projects: '',
-    madeBy: ''
+    madeBy: 'Hecho por',
+		contactTitle: 'Contáctenos',
+		name: "Nombre",
+		email: 'Correo Electónico',
+		message: 'Comentario',
+		button: 'Enviar'
   },
   languageButton: {
     language: ''

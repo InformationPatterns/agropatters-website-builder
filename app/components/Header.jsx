@@ -14,6 +14,7 @@ class Header extends React.Component {
 							<li><a href="#segment-client">{this.props.tabOne}</a></li>
 							<li><a href="#segment-monitor">{this.props.tabTwo}</a></li>
 							<li><a href="#segment-report">{this.props.tabThree}</a></li>
+							<li><a href="#segment-footer">{this.props.tabFive}</a></li>
 							<li><a href="https://www.agropatterns.com/" target="_blank">{this.props.tabFour}</a></li>
 						</ul>
 					</div>

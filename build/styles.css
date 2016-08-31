@@ -107,7 +107,81 @@
 .font-style {
   font-family: serif;
 }
+.segment-footer {
+  background-image: url(/images/info.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+footer .contact {
+  display: flex;
+  flex-direction: row;
+}
+footer .contactTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+footer .contact-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+footer .contact-list {
+  display: flex;
+  flex-direction: column;
 
+}
+footer .contact-list li {
+  padding: 20px 0;
+}
+footer .icon-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer .list-icon {
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+footer .button {
+  max-width: 10vw;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.input-field {
+  display: flex !important;
+  max-width: 30vw;
+}
+
+ .input-field label {
+   color: #9e9e9e;
+ }
+
+ .input-field input[type=text]:focus + label {
+   color: #e57373;
+ }
+
+ .input-field input[type=text]:focus {
+   border-bottom: 1px solid #e57373;
+   box-shadow: 0 1px 0 0 #e57373;
+}
+
+.input-field textarea[type=text]:focus + label {
+  color: #e57373;
+}
+
+.input-field textarea[type=text]:focus {
+  border-bottom: 1px solid #e57373;
+  box-shadow: 0 1px 0 0 #e57373;
+}
+.input-field .prefix.active {
+   color: #e57373;
+ }
 
 .language-button {
   position: fixed;
