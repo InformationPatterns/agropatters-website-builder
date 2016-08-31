@@ -4,11 +4,11 @@ class Sections extends React.Component {
 	render () {
 		return(
 		  <div id={this.props.id} className="section">
-		        <div className="section-content green-text text-darken-4">
+		        <div className="section-content blue-grey-text text-darken-3">
 		        	<h4 >
 								{this.props.title}
 							</h4>
-		          <p className="large-font font-style green-text text-darken-4">
+		          <p className="large-font font-style blue-grey-text text-darken-3">
 								{this.props.content}
 							</p>
 							{this.props.google ?

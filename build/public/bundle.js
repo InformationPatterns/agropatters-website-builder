@@ -22106,7 +22106,7 @@
 			title: 'Protection and Prevention',
 			content: 'Historical reports such as incidence and severity allow us to study the effectiveness of protection and prevention activities. Making decisions based on information is the key to maintaining the highest quality at all times.',
 			id: 'segment-report',
-			img: '/images/reports.png'
+			img: '/images/monitoring.png'
 		},
 		ourClients: {
 			title: 'Our Commitment to Floricultores',
@@ -22147,7 +22147,7 @@
 			title: 'Monitoreo Constante',
 			content: 'El Mapa de Monitoreo es su herrmienta es su control diario en temas de sanidad vegetal. En todo momento y desde cualquier lugar puede obtener la información más actualizada sobre la presencia y servidad de plagas y enfermedades en su cultivo.',
 			id: 'segment-monitor',
-			img: '/images/reports.png'
+			img: '/images/monitoring.png'
 		},
 		report: {
 			title: 'Protección y Prevención',
@@ -22334,7 +22334,7 @@
 					{ id: this.props.id, className: "section" },
 					_react2.default.createElement(
 						"div",
-						{ className: "section-content green-text text-darken-4" },
+						{ className: "section-content blue-grey-text text-darken-3" },
 						_react2.default.createElement(
 							"h4",
 							null,
@@ -22342,7 +22342,7 @@
 						),
 						_react2.default.createElement(
 							"p",
-							{ className: "large-font font-style green-text text-darken-4" },
+							{ className: "large-font font-style blue-grey-text text-darken-3" },
 							this.props.content
 						),
 						this.props.google ? _react2.default.createElement(
