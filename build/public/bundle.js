@@ -22116,7 +22116,8 @@
 		},
 		footer: {
 			madeBy: 'Made by',
-			contactTitle: 'Contact Us', name: "Name",
+			contactTitle: 'Contact Us',
+			name: "Name",
 			email: 'Email',
 			message: 'Message',
 			button: 'Submit'
