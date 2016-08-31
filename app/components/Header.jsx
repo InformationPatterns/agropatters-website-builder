@@ -8,7 +8,7 @@ class Header extends React.Component {
 					<div className="nav-wrapper">
 						<ul className="left hide-on-small-only">
 							<li className='brand'>
-								<img src='/images/icon.png' />
+								<img src='images/icon.png' />
 								<b>AgroPatterns</b>
 							</li>
 							<li><a href="#segment-client">{this.props.tabOne}</a></li>

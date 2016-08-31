@@ -132,9 +132,11 @@ footer .contact-list {
   flex-direction: column;
 
 }
+
 footer .contact-list li {
   padding: 20px 0;
 }
+
 footer .icon-list-item {
   display: flex;
   flex-direction: row;
