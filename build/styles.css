@@ -69,11 +69,48 @@
   flex-direction: column;
   flex-grow: 1;
   flex-basis: 0;
+  overflow: hidden;
 }
 
 .mockImage img {
   max-height: 70vh;
   max-width: 35vw;
+}
+
+.monitoring {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.blankPosition {
+  position: relative;
+  z-index: 2;
+  max-height: 70vh;
+  max-width: 35vw;
+}
+
+.monitorPosition {
+  position: absolute;
+  z-index: 1;
+  margin-top: 3%;
+  width: 70%;
+  height: 90%;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.monitorPosition.active {
+  opacity: 1;
 }
 
 .section-content {
@@ -96,6 +133,10 @@
   flex-grow: 1;
 }
 
+#segment-client .inpsectionTab {
+  font-size: 2em !important;
+}
+
 #segment-monitor {
   background-color: #97b194;
 }
@@ -105,7 +146,7 @@
 }
 
 .font-style {
-  font-family: serif;
+  /*font-family: serif;*/
 }
 .segment-footer {
   background-image: url(/images/info.jpg);

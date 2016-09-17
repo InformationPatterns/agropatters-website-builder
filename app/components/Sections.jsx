@@ -1,6 +1,12 @@
 import React from 'react';
 
 class Sections extends React.Component {
+	componentDidUpdate() {
+		$('.carousel').carousel();
+	}
+	componentDidMount() {
+		$('.carousel').carousel();
+	}
 	render () {
 		return(
 		  <div id={this.props.id} className="section">
@@ -18,13 +24,21 @@ class Sections extends React.Component {
 							: null}
 		        </div>
 						<div className='mockImage'>
-							<img src={this.props.img} />
+							{this.props.carousel ?
+								<div className="carousel">
+									{this.props.imgs.map((image,i) => {
+										return <a key={i} className="carousel-item"><img src={image} /></a>
+									})}
+							  </div>
+							: <img src={this.props.img} />}
 						</div>
 		  </div>)
 	}
 }
 
 module.exports = Sections
+
+// $('.carousel.carousel-slider').carousel({full_width: true});
 
 
 /*

@@ -25,13 +25,13 @@ const en = {
 		title: 'Constant Monitoring',
 		content: 'Monitoring Map is your daily Supplied tools is its control plant health issues. At any time and from anywhere you can get the latest information on the presence and servidad of pests and diseases in cultivation.',
 		id: 'segment-monitor',
-		img: 'images/reports.png'
+		img: 'images/monitoring.png'
 	},
 	report: {
 		title: 'Protection and Prevention',
 		content: 'Historical reports such as incidence and severity allow us to study the effectiveness of protection and prevention activities. Making decisions based on information is the key to maintaining the highest quality at all times.',
 		id: 'segment-report',
-		img: 'images/monitoring.png'
+		img: 'images/reports.png'
 	},
 	ourClients: {
 		title: 'Our Commitment to Floricultores',
@@ -73,7 +73,8 @@ const es = {
 		title: 'Monitoreo Constante',
 		content: 'El Mapa de Monitoreo es su herrmienta es su control diario en temas de sanidad vegetal. En todo momento y desde cualquier lugar puede obtener la información más actualizada sobre la presencia y servidad de plagas y enfermedades en su cultivo.',
 		id: 'segment-monitor',
-		img: 'images/monitoring.png'
+		imgs: ['images/monitoring.png','images/monitoring2.png','images/monitoring3.png'],
+		carousel: true,
 	},
 	report: {
 		title: 'Protección y Prevención',
