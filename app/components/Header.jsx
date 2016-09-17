@@ -11,7 +11,7 @@ class Header extends React.Component {
 								<img src='images/icon.png' />
 								<b>AgroPatterns</b>
 							</li>
-							<li><a href="#segment-client inspectionTab">{this.props.tabOne}</a></li>
+							<li><a href="#segment-client">{this.props.tabOne}</a></li>
 							<li><a href="#segment-monitor">{this.props.tabTwo}</a></li>
 							<li><a href="#segment-report">{this.props.tabThree}</a></li>
 							<li><a href="#segment-footer">{this.props.tabFive}</a></li>
