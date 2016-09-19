@@ -22328,45 +22328,40 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var OurClients = function (_React$Component) {
-	  _inherits(OurClients, _React$Component);
+	    _inherits(OurClients, _React$Component);
 	
-	  function OurClients() {
-	    _classCallCheck(this, OurClients);
+	    function OurClients() {
+	        _classCallCheck(this, OurClients);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(OurClients).apply(this, arguments));
-	  }
-	
-	  _createClass(OurClients, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { id: 'segment-ourClients' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'container segment-ourClients white-text' },
-	          _react2.default.createElement(
-	            'h5',
-	            { className: 'center' },
-	            this.props.title
-	          ),
-	          _react2.default.createElement(
-	            'h6',
-	            { className: 'center' },
-	            this.props.content
-	          ),
-	          _react2.default.createElement(
-	            'h5',
-	            null,
-	            this.props.subTitle
-	          ),
-	          _react2.default.createElement('img', { src: this.props.img })
-	        )
-	      );
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(OurClients).apply(this, arguments));
 	    }
-	  }]);
 	
-	  return OurClients;
+	    _createClass(OurClients, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { id: 'segment-ourClients' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'container segment-ourClients white-text' },
+	                    _react2.default.createElement(
+	                        'h5',
+	                        { className: 'center' },
+	                        this.props.title
+	                    ),
+	                    _react2.default.createElement(
+	                        'h6',
+	                        { className: 'center commitPad' },
+	                        this.props.content
+	                    ),
+	                    _react2.default.createElement('img', { className: 'iconSize', src: 'images/icon.png' })
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return OurClients;
 	}(_react2.default.Component);
 	
 	module.exports = OurClients;

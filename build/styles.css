@@ -141,6 +141,15 @@ nav li a {
   background-color: #97b194;
 }
 
+.iconSize {
+  max-width: 10%;
+  padding-top: 10px;
+}
+
+.commitPad {
+  padding: 30px;
+}
+
 .large-font {
   font-size: 180%;
 }
