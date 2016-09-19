@@ -25,7 +25,7 @@ class App extends React.Component {
     let lang = this.state.lang
     return (<div id="top">
     	<Header {...T9n('header', lang)} />
-    	<Client {...T9n('client', lang)} />
+    	<Client {...T9n('client', lang)} lang={this.state.lang} />
 			<Monitor {...T9n('monitor', lang)} />
 			<Report {...T9n('report', lang)} />
       <OurClients {...T9n('ourClients', lang)} />

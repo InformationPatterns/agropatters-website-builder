@@ -12,9 +12,9 @@ class Client extends React.Component {
 								{this.props.content}
 							</p>
 							{this.props.google ?
-								<div className="googleButtonWrapper">
+								<a className="googleButtonWrapper" href={`https://play.google.com/store/apps/details?id=com.agropatterns&hl=${this.props.lang}`}>
 									<img className='googleButton' src={this.props.google} />
-								</div>
+								</a>
 							: null}
 		        </div>
 						<div className='mockImage'>
