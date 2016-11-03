@@ -49,8 +49,6 @@
 
 	'use strict';
 	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _react = __webpack_require__(/*! react */ 1);
@@ -59,41 +57,25 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 35);
 	
-	var _translations = __webpack_require__(/*! ./translations.jsx */ 175);
-	
-	var _translations2 = _interopRequireDefault(_translations);
-	
-	var _Header = __webpack_require__(/*! ./components/Header.jsx */ 176);
+	var _Header = __webpack_require__(/*! ./components/html/Header.jsx */ 175);
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
-	var _OurClients = __webpack_require__(/*! ./components/OurClients.jsx */ 177);
-	
-	var _OurClients2 = _interopRequireDefault(_OurClients);
-	
-	var _Footer = __webpack_require__(/*! ./components/Footer.jsx */ 178);
+	var _Footer = __webpack_require__(/*! ./components/html/Footer.jsx */ 182);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
-	var _Monitor = __webpack_require__(/*! ./components/Monitor.jsx */ 179);
+	var _Body = __webpack_require__(/*! ./components/html/Body.jsx */ 183);
 	
-	var _Monitor2 = _interopRequireDefault(_Monitor);
+	var _Body2 = _interopRequireDefault(_Body);
 	
-	var _Report = __webpack_require__(/*! ./components/Report.jsx */ 180);
-	
-	var _Report2 = _interopRequireDefault(_Report);
-	
-	var _Client = __webpack_require__(/*! ./components/Client.jsx */ 181);
-	
-	var _Client2 = _interopRequireDefault(_Client);
-	
-	var _BackToTop = __webpack_require__(/*! ./components/BackToTop.jsx */ 182);
+	var _BackToTop = __webpack_require__(/*! ./components/html/BackToTop.jsx */ 184);
 	
 	var _BackToTop2 = _interopRequireDefault(_BackToTop);
 	
-	var _LanguageButton = __webpack_require__(/*! ./components/LanguageButton.jsx */ 183);
+	__webpack_require__(/*! ./components/css/main.less */ 185);
 	
-	var _LanguageButton2 = _interopRequireDefault(_LanguageButton);
+	__webpack_require__(/*! normalize-css */ 189);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -123,14 +105,10 @@
 	      var lang = this.state.lang;
 	      return _react2.default.createElement(
 	        'div',
-	        { id: 'top' },
-	        _react2.default.createElement(_Header2.default, (0, _translations2.default)('header', lang)),
-	        _react2.default.createElement(_Client2.default, _extends({}, (0, _translations2.default)('client', lang), { lang: this.state.lang })),
-	        _react2.default.createElement(_Monitor2.default, (0, _translations2.default)('monitor', lang)),
-	        _react2.default.createElement(_Report2.default, (0, _translations2.default)('report', lang)),
-	        _react2.default.createElement(_OurClients2.default, (0, _translations2.default)('ourClients', lang)),
-	        _react2.default.createElement(_Footer2.default, (0, _translations2.default)('footer', lang)),
-	        _react2.default.createElement(_LanguageButton2.default, _extends({ lang: lang, onChange: this.onChange.bind(this) }, (0, _translations2.default)('languageButton', lang))),
+	        { id: 'top', className: 'test' },
+	        _react2.default.createElement(_Header2.default, null),
+	        _react2.default.createElement(_Body2.default, null),
+	        _react2.default.createElement(_Footer2.default, null),
 	        _react2.default.createElement(_BackToTop2.default, null)
 	      );
 	    }
@@ -22076,122 +22054,12 @@
 
 /***/ },
 /* 175 */
-/*!******************************!*\
-  !*** ./app/translations.jsx ***!
-  \******************************/
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	var T9n = function T9n(name, lang) {
-		if (lang == 'en') return en[name] || {};else if (lang == 'es') return es[name] || {};else return {};
-	};
-	module.exports = T9n;
-	
-	var en = {
-		header: {
-			title: 'We accompany him on all protection activities in cultivation',
-			tabOne: 'Inspection',
-			tabTwo: 'Monitoring',
-			tabThree: 'Protection',
-			tabFour: 'Sign In',
-			tabFive: 'Contact Us'
-		},
-		client: {
-			title: 'Field Inspection',
-			content: 'The smartphone is the tool to record vegetel health indicators in the crop. When there is Internet access, this information is transmitted stored in the cloud.',
-			id: 'segment-client',
-			img: 'images/phone.png',
-			google: 'images/googleEN.png'
-		},
-		monitor: {
-			title: 'Constant Monitoring',
-			content: 'Monitoring Map is your daily Supplied tools is its control plant health issues. At any time and from anywhere you can get the latest information on the presence and servidad of pests and diseases in cultivation.',
-			id: 'segment-monitor',
-			img: 'images/monitoring.png'
-		},
-		report: {
-			title: 'Protection and Prevention',
-			content: 'Historical reports such as incidence and severity allow us to study the effectiveness of protection and prevention activities. Making decisions based on information is the key to maintaining the highest quality at all times.',
-			id: 'segment-report',
-			img: 'images/reports.png'
-		},
-		ourClients: {
-			title: 'Our Commitment to Floricultores',
-			content: 'We fifteen years implementing solutions for crop protection and we have prestigious institutions that recognize the benefit obtained by using our shiny technology.',
-			subTitle: 'Our Customers',
-			img: 'images/clients.jpg'
-		},
-		footer: {
-			madeBy: 'Made by',
-			contactTitle: 'Contact Us',
-			name: "Name",
-			email: 'Email',
-			message: 'Message',
-			button: 'Submit'
-		},
-		languageButton: {
-			language: 'Language'
-		}
-	};
-	
-	var es = {
-		header: {
-			title: 'Lo acompañamos en todas las actividades de protección e su cultivo',
-			subTitle: '',
-			tabOne: 'Inspección',
-			tabTwo: 'Monitorio',
-			tabThree: 'Protección',
-			tabFour: 'Ingresar',
-			tabFive: 'Contáctenos'
-		},
-		client: {
-			title: 'Inspección en Campo',
-			content: 'El teléfono intelegente es la herramienta para registrar los indicadores de sanidad vegetel en el cultivo. Cuando exista acceso a Internet, esta información es transmitida  almacenada en la nube.',
-			id: 'segment-client',
-			img: 'images/phone.png',
-			google: 'images/googleES.png'
-		},
-		monitor: {
-			title: 'Monitoreo Constante',
-			content: 'El Mapa de Monitoreo es su herrmienta es su control diario en temas de sanidad vegetal. En todo momento y desde cualquier lugar puede obtener la información más actualizada sobre la presencia y servidad de plagas y enfermedades en su cultivo.',
-			id: 'segment-monitor',
-			imgs: ['images/monitoring.png', 'images/monitoring2.png', 'images/monitoring3.png'],
-			carousel: true
-		},
-		report: {
-			title: 'Protección y Prevención',
-			content: 'Reportes históricos como los de Incidencia y Severidad permiten estudiar la eficacia de las actividades de protección y prevención. La toma de decisiones con base en información es la clave para mantener una altísima calidad en todo momento.',
-			id: 'segment-report',
-			img: 'images/reports.png'
-		},
-		ourClients: {
-			title: 'Nuestro Compromiso con los Floricultores',
-			content: 'Llevamos quince años implementando soluciones para la protección de cultivos y contamos con prestigiosas entidades que reconocen el beneficio que obtienen al usar nestra tecnología',
-			subTitle: 'Algunos de Nuestros Clientes',
-			img: 'images/clients.jpg'
-		},
-		footer: {
-			madeBy: 'Hecho por',
-			contactTitle: 'Contáctenos',
-			name: "Nombre",
-			email: 'Correo Electónico',
-			message: 'Comentario',
-			button: 'Enviar'
-		},
-		languageButton: {
-			language: ''
-		}
-	};
-
-/***/ },
-/* 176 */
-/*!***********************************!*\
-  !*** ./app/components/Header.jsx ***!
-  \***********************************/
+/*!****************************************!*\
+  !*** ./app/components/html/Header.jsx ***!
+  \****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -22217,83 +22085,54 @@
 		}
 	
 		_createClass(Header, [{
-			key: 'render',
+			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					'div',
-					{ id: 'segment-header' },
+					"div",
+					{ className: "headerImage" },
 					_react2.default.createElement(
-						'nav',
-						{ className: 'z-depth-0' },
+						"nav",
+						{ className: "navStyle" },
 						_react2.default.createElement(
-							'div',
-							{ className: 'nav-wrapper' },
+							"div",
+							null,
 							_react2.default.createElement(
-								'ul',
-								{ className: 'left hide-on-small-only' },
+								"ul",
+								null,
 								_react2.default.createElement(
-									'li',
-									{ className: 'brand' },
-									_react2.default.createElement('img', { src: 'images/icon.png' }),
+									"li",
+									null,
 									_react2.default.createElement(
-										'b',
-										null,
-										'AgroPatterns'
+										"a",
+										{ href: "" },
+										"Website Design"
 									)
 								),
 								_react2.default.createElement(
-									'li',
+									"li",
 									null,
 									_react2.default.createElement(
-										'a',
-										{ href: '#segment-client' },
-										this.props.tabOne
+										"a",
+										{ href: "" },
+										"Photography"
 									)
 								),
 								_react2.default.createElement(
-									'li',
+									"li",
 									null,
 									_react2.default.createElement(
-										'a',
-										{ href: '#segment-monitor' },
-										this.props.tabTwo
-									)
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									_react2.default.createElement(
-										'a',
-										{ href: '#segment-report' },
-										this.props.tabThree
-									)
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									_react2.default.createElement(
-										'a',
-										{ href: '#segment-footer' },
-										this.props.tabFive
-									)
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									_react2.default.createElement(
-										'a',
-										{ href: 'https://www.agropatterns.com/', target: '_blank' },
-										this.props.tabFour
+										"a",
+										{ href: "" },
+										"Art"
 									)
 								)
 							)
 						)
 					),
-					_react2.default.createElement('div', { className: 'fill' }),
 					_react2.default.createElement(
-						'h1',
-						{ className: 'white-text' },
-						this.props.title
+						"h1",
+						null,
+						"Title"
 					)
 				);
 			}
@@ -22305,75 +22144,331 @@
 	module.exports = Header;
 
 /***/ },
-/* 177 */
-/*!***************************************!*\
-  !*** ./app/components/OurClients.jsx ***!
-  \***************************************/
+/* 176 */,
+/* 177 */,
+/* 178 */
+/*!**************************************!*\
+  !*** ./~/css-loader/lib/css-base.js ***!
+  \**************************************/
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+	
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+	
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+
+/***/ },
+/* 179 */
+/*!*************************************!*\
+  !*** ./~/style-loader/addStyles.js ***!
+  \*************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	var stylesInDom = {},
+		memoize = function(fn) {
+			var memo;
+			return function () {
+				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+				return memo;
+			};
+		},
+		isOldIE = memoize(function() {
+			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+		}),
+		getHeadElement = memoize(function () {
+			return document.head || document.getElementsByTagName("head")[0];
+		}),
+		singletonElement = null,
+		singletonCounter = 0,
+		styleElementsInsertedAtTop = [];
+	
+	module.exports = function(list, options) {
+		if(true) {
+			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+		}
+	
+		options = options || {};
+		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+		// tags it will allow on a page
+		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+	
+		// By default, add <style> tags to the bottom of <head>.
+		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+	
+		var styles = listToStyles(list);
+		addStylesToDom(styles, options);
+	
+		return function update(newList) {
+			var mayRemove = [];
+			for(var i = 0; i < styles.length; i++) {
+				var item = styles[i];
+				var domStyle = stylesInDom[item.id];
+				domStyle.refs--;
+				mayRemove.push(domStyle);
+			}
+			if(newList) {
+				var newStyles = listToStyles(newList);
+				addStylesToDom(newStyles, options);
+			}
+			for(var i = 0; i < mayRemove.length; i++) {
+				var domStyle = mayRemove[i];
+				if(domStyle.refs === 0) {
+					for(var j = 0; j < domStyle.parts.length; j++)
+						domStyle.parts[j]();
+					delete stylesInDom[domStyle.id];
+				}
+			}
+		};
+	}
+	
+	function addStylesToDom(styles, options) {
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			if(domStyle) {
+				domStyle.refs++;
+				for(var j = 0; j < domStyle.parts.length; j++) {
+					domStyle.parts[j](item.parts[j]);
+				}
+				for(; j < item.parts.length; j++) {
+					domStyle.parts.push(addStyle(item.parts[j], options));
+				}
+			} else {
+				var parts = [];
+				for(var j = 0; j < item.parts.length; j++) {
+					parts.push(addStyle(item.parts[j], options));
+				}
+				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+			}
+		}
+	}
+	
+	function listToStyles(list) {
+		var styles = [];
+		var newStyles = {};
+		for(var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var id = item[0];
+			var css = item[1];
+			var media = item[2];
+			var sourceMap = item[3];
+			var part = {css: css, media: media, sourceMap: sourceMap};
+			if(!newStyles[id])
+				styles.push(newStyles[id] = {id: id, parts: [part]});
+			else
+				newStyles[id].parts.push(part);
+		}
+		return styles;
+	}
+	
+	function insertStyleElement(options, styleElement) {
+		var head = getHeadElement();
+		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+		if (options.insertAt === "top") {
+			if(!lastStyleElementInsertedAtTop) {
+				head.insertBefore(styleElement, head.firstChild);
+			} else if(lastStyleElementInsertedAtTop.nextSibling) {
+				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+			} else {
+				head.appendChild(styleElement);
+			}
+			styleElementsInsertedAtTop.push(styleElement);
+		} else if (options.insertAt === "bottom") {
+			head.appendChild(styleElement);
+		} else {
+			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+		}
+	}
+	
+	function removeStyleElement(styleElement) {
+		styleElement.parentNode.removeChild(styleElement);
+		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+		if(idx >= 0) {
+			styleElementsInsertedAtTop.splice(idx, 1);
+		}
+	}
+	
+	function createStyleElement(options) {
+		var styleElement = document.createElement("style");
+		styleElement.type = "text/css";
+		insertStyleElement(options, styleElement);
+		return styleElement;
+	}
+	
+	function createLinkElement(options) {
+		var linkElement = document.createElement("link");
+		linkElement.rel = "stylesheet";
+		insertStyleElement(options, linkElement);
+		return linkElement;
+	}
+	
+	function addStyle(obj, options) {
+		var styleElement, update, remove;
+	
+		if (options.singleton) {
+			var styleIndex = singletonCounter++;
+			styleElement = singletonElement || (singletonElement = createStyleElement(options));
+			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+		} else if(obj.sourceMap &&
+			typeof URL === "function" &&
+			typeof URL.createObjectURL === "function" &&
+			typeof URL.revokeObjectURL === "function" &&
+			typeof Blob === "function" &&
+			typeof btoa === "function") {
+			styleElement = createLinkElement(options);
+			update = updateLink.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+				if(styleElement.href)
+					URL.revokeObjectURL(styleElement.href);
+			};
+		} else {
+			styleElement = createStyleElement(options);
+			update = applyToTag.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+			};
+		}
+	
+		update(obj);
+	
+		return function updateStyle(newObj) {
+			if(newObj) {
+				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+					return;
+				update(obj = newObj);
+			} else {
+				remove();
+			}
+		};
+	}
+	
+	var replaceText = (function () {
+		var textStore = [];
+	
+		return function (index, replacement) {
+			textStore[index] = replacement;
+			return textStore.filter(Boolean).join('\n');
+		};
+	})();
+	
+	function applyToSingletonTag(styleElement, index, remove, obj) {
+		var css = remove ? "" : obj.css;
+	
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = replaceText(index, css);
+		} else {
+			var cssNode = document.createTextNode(css);
+			var childNodes = styleElement.childNodes;
+			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+			if (childNodes.length) {
+				styleElement.insertBefore(cssNode, childNodes[index]);
+			} else {
+				styleElement.appendChild(cssNode);
+			}
+		}
+	}
+	
+	function applyToTag(styleElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+	
+		if(media) {
+			styleElement.setAttribute("media", media)
+		}
+	
+		if(styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = css;
+		} else {
+			while(styleElement.firstChild) {
+				styleElement.removeChild(styleElement.firstChild);
+			}
+			styleElement.appendChild(document.createTextNode(css));
+		}
+	}
+	
+	function updateLink(linkElement, obj) {
+		var css = obj.css;
+		var sourceMap = obj.sourceMap;
+	
+		if(sourceMap) {
+			// http://stackoverflow.com/a/26603875
+			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+		}
+	
+		var blob = new Blob([css], { type: "text/css" });
+	
+		var oldSrc = linkElement.href;
+	
+		linkElement.href = URL.createObjectURL(blob);
+	
+		if(oldSrc)
+			URL.revokeObjectURL(oldSrc);
+	}
+
+
+/***/ },
+/* 180 */,
+/* 181 */,
+/* 182 */
+/*!****************************************!*\
+  !*** ./app/components/html/Footer.jsx ***!
+  \****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var OurClients = function (_React$Component) {
-	    _inherits(OurClients, _React$Component);
-	
-	    function OurClients() {
-	        _classCallCheck(this, OurClients);
-	
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(OurClients).apply(this, arguments));
-	    }
-	
-	    _createClass(OurClients, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { id: 'segment-ourClients' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'container segment-ourClients white-text' },
-	                    _react2.default.createElement(
-	                        'h5',
-	                        { className: 'center' },
-	                        this.props.title
-	                    ),
-	                    _react2.default.createElement(
-	                        'h6',
-	                        { className: 'center commitPad' },
-	                        this.props.content
-	                    ),
-	                    _react2.default.createElement('img', { className: 'iconSize', src: 'images/icon.png' })
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return OurClients;
-	}(_react2.default.Component);
-	
-	module.exports = OurClients;
-
-/***/ },
-/* 178 */
-/*!***********************************!*\
-  !*** ./app/components/Footer.jsx ***!
-  \***********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -22399,126 +22494,46 @@
 		}
 	
 		_createClass(Footer, [{
-			key: "componentDidUpdate",
+			key: 'componentDidUpdate',
 			value: function componentDidUpdate() {
 				// Materialize.updateTextFields();
 			}
 		}, {
-			key: "render",
+			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
-					"footer",
-					{ id: "segment-footer", className: "page-footer" },
+					'footer',
+					null,
 					_react2.default.createElement(
-						"div",
-						{ className: "container contactTitle blue-grey-text" },
+						'div',
+						null,
 						_react2.default.createElement(
-							"h5",
+							'h5',
 							null,
-							this.props.contactTitle
+							'Contact Me'
 						)
 					),
 					_react2.default.createElement(
-						"div",
-						{ className: "container contact" },
+						'div',
+						null,
 						_react2.default.createElement(
-							"form",
-							{ className: "contact-form", action: "//formspree.io/cmtoups@me.com", method: "POST" },
-							_react2.default.createElement(
-								"div",
-								{ className: "input-field" },
-								_react2.default.createElement("input", { name: "name", id: "name", type: "text" }),
-								_react2.default.createElement(
-									"label",
-									{ htmlFor: "name", className: "" },
-									this.props.name
-								)
-							),
-							_react2.default.createElement(
-								"div",
-								{ className: "input-field" },
-								_react2.default.createElement("input", { name: "email", id: "email", type: "text" }),
-								_react2.default.createElement(
-									"label",
-									{ htmlFor: "email", className: "" },
-									this.props.email
-								)
-							),
-							_react2.default.createElement(
-								"div",
-								{ className: "input-field" },
-								_react2.default.createElement("textarea", { name: "body", id: "message", type: "text", className: "materialize-textarea" }),
-								_react2.default.createElement(
-									"label",
-									{ htmlFor: "message", className: "" },
-									this.props.message
-								)
-							),
-							_react2.default.createElement(
-								"div",
-								{ className: "button" },
-								_react2.default.createElement("input", { type: "submit", className: "waves-effect waves-light btn red lighten-2", value: this.props.button })
-							)
+							'h6',
+							null,
+							'email'
 						),
 						_react2.default.createElement(
-							"div",
-							{ className: "contact-list" },
-							_react2.default.createElement(
-								"ul",
-								null,
-								_react2.default.createElement(
-									"li",
-									{ className: "icon-list-item" },
-									_react2.default.createElement(
-										"i",
-										{ className: "material-icons list-icon red-text text-lighten-2" },
-										"room"
-									),
-									_react2.default.createElement(
-										"a",
-										{ className: "grey-text" },
-										"Calle 125 No.19 - 89 Ofc.502 Bogotá, Colombia"
-									)
-								),
-								_react2.default.createElement(
-									"li",
-									{ className: "icon-list-item" },
-									_react2.default.createElement(
-										"i",
-										{ className: "material-icons list-icon red-text text-lighten-2" },
-										"email"
-									),
-									_react2.default.createElement(
-										"a",
-										{ className: "grey-text" },
-										"agroskan@mapasydatos.com"
-									)
-								),
-								_react2.default.createElement(
-									"li",
-									{ className: "icon-list-item" },
-									_react2.default.createElement(
-										"i",
-										{ className: "material-icons list-icon red-text text-lighten-2" },
-										"phone"
-									),
-									_react2.default.createElement(
-										"a",
-										{ className: "grey-text" },
-										"571.638.1073"
-									)
-								)
-							)
+							'h6',
+							null,
+							'phone'
 						)
 					),
 					_react2.default.createElement(
-						"div",
-						{ className: "footer-copyright" },
+						'div',
+						null,
 						_react2.default.createElement(
-							"div",
-							{ className: "container grey-text" },
-							this.props.madeBy,
-							" Emma Stoumen"
+							'div',
+							null,
+							'Made By Emma Stoumen'
 						)
 					)
 				);
@@ -22531,235 +22546,58 @@
 	module.exports = Footer;
 
 /***/ },
-/* 179 */
-/*!************************************!*\
-  !*** ./app/components/Monitor.jsx ***!
-  \************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Monitor = function (_React$Component) {
-		_inherits(Monitor, _React$Component);
-	
-		function Monitor() {
-			_classCallCheck(this, Monitor);
-	
-			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Monitor).call(this));
-	
-			_this.state = { activeNumber: 1 };
-			setInterval(function () {
-				var nextNumber = _this.state.activeNumber + 1;
-				if (nextNumber == 4) {
-					nextNumber = 1;
-				}
-				_this.setState({ activeNumber: nextNumber });
-			}, 3000);
-			return _this;
-		}
-	
-		_createClass(Monitor, [{
-			key: "render",
-			value: function render() {
-				return _react2.default.createElement(
-					"div",
-					{ id: this.props.id, className: "section" },
-					_react2.default.createElement(
-						"div",
-						{ className: "section-content blue-grey-text text-darken-3" },
-						_react2.default.createElement(
-							"h4",
-							null,
-							" ",
-							this.props.title,
-							" "
-						),
-						_react2.default.createElement(
-							"p",
-							{ className: "large-font font-style blue-grey-text text-darken-3" },
-							this.props.content
-						)
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "monitoring" },
-						_react2.default.createElement("img", { className: "blankPosition", src: "images/blank.png" }),
-						_react2.default.createElement("img", { className: "monitorPosition " + this.getActive(1), src: "images/monitoring.png" }),
-						_react2.default.createElement("img", { className: "monitorPosition " + this.getActive(2), src: "images/monitoring2.png" }),
-						_react2.default.createElement("img", { className: "monitorPosition " + this.getActive(3), src: "images/monitoring3.png" })
-					)
-				);
-			}
-		}, {
-			key: "getActive",
-			value: function getActive(num) {
-				if (num == this.state.activeNumber) {
-					return 'active';
-				}
-			}
-		}]);
-	
-		return Monitor;
-	}(_react2.default.Component);
-	
-	module.exports = Monitor;
-
-/***/ },
-/* 180 */
-/*!***********************************!*\
-  !*** ./app/components/Report.jsx ***!
-  \***********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Report = function (_React$Component) {
-		_inherits(Report, _React$Component);
-	
-		function Report() {
-			_classCallCheck(this, Report);
-	
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(Report).apply(this, arguments));
-		}
-	
-		_createClass(Report, [{
-			key: "render",
-			value: function render() {
-				return _react2.default.createElement(
-					"div",
-					{ id: this.props.id, className: "section" },
-					_react2.default.createElement(
-						"div",
-						{ className: "section-content blue-grey-text text-darken-3" },
-						_react2.default.createElement(
-							"h4",
-							null,
-							this.props.title
-						),
-						_react2.default.createElement(
-							"p",
-							{ className: "large-font font-style blue-grey-text text-darken-3" },
-							this.props.content
-						)
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "mockImage" },
-						_react2.default.createElement("img", { src: this.props.img })
-					)
-				);
-			}
-		}]);
-	
-		return Report;
-	}(_react2.default.Component);
-	
-	module.exports = Report;
-
-/***/ },
-/* 181 */
-/*!***********************************!*\
-  !*** ./app/components/Client.jsx ***!
-  \***********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Client = function (_React$Component) {
-		_inherits(Client, _React$Component);
-	
-		function Client() {
-			_classCallCheck(this, Client);
-	
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(Client).apply(this, arguments));
-		}
-	
-		_createClass(Client, [{
-			key: "render",
-			value: function render() {
-				return _react2.default.createElement(
-					"div",
-					{ id: this.props.id, className: "section" },
-					_react2.default.createElement(
-						"div",
-						{ className: "section-content blue-grey-text text-darken-3" },
-						_react2.default.createElement(
-							"h4",
-							null,
-							this.props.title
-						),
-						_react2.default.createElement(
-							"p",
-							{ className: "large-font font-style blue-grey-text text-darken-3" },
-							this.props.content
-						),
-						this.props.google ? _react2.default.createElement(
-							"a",
-							{ className: "googleButtonWrapper", href: "https://play.google.com/store/apps/details?id=com.agropatterns&hl=" + this.props.lang },
-							_react2.default.createElement("img", { className: "googleButton", src: this.props.google })
-						) : null
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "mockImage" },
-						_react2.default.createElement("img", { src: this.props.img })
-					)
-				);
-			}
-		}]);
-	
-		return Client;
-	}(_react2.default.Component);
-	
-	module.exports = Client;
-
-/***/ },
-/* 182 */
+/* 183 */
 /*!**************************************!*\
-  !*** ./app/components/BackToTop.jsx ***!
+  !*** ./app/components/html/Body.jsx ***!
   \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Body = function (_React$Component) {
+	  _inherits(Body, _React$Component);
+	
+	  function Body() {
+	    _classCallCheck(this, Body);
+	
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Body).apply(this, arguments));
+	  }
+	
+	  _createClass(Body, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'h3',
+	        null,
+	        'test content'
+	      );
+	    }
+	  }]);
+	
+	  return Body;
+	}(_react2.default.Component);
+	
+	module.exports = Body;
+
+/***/ },
+/* 184 */
+/*!*******************************************!*\
+  !*** ./app/components/html/BackToTop.jsx ***!
+  \*******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22812,62 +22650,101 @@
 	module.exports = BackToTop;
 
 /***/ },
-/* 183 */
-/*!*******************************************!*\
-  !*** ./app/components/LanguageButton.jsx ***!
-  \*******************************************/
+/* 185 */
+/*!**************************************!*\
+  !*** ./app/components/css/main.less ***!
+  \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	// load the styles
+	var content = __webpack_require__(/*! !./../../../~/css-loader!./../../../~/less-loader!./main.less */ 186);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ./../../../~/style-loader/addStyles.js */ 179)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./main.less", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./main.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 186 */
+/*!*********************************************************************!*\
+  !*** ./~/css-loader!./~/less-loader!./app/components/css/main.less ***!
+  \*********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 178)();
+	// imports
 	
-	var _react = __webpack_require__(/*! react */ 1);
 	
-	var _react2 = _interopRequireDefault(_react);
+	// module
+	exports.push([module.id, ".headerImage {\n  background-image: url(\"https://mail.google.com/mail/u/0/?ui=2&ik=b10cb206a3&view=fimg&th=158272d1116a1bdd&attid=0.1&disp=inline&realattid=f_iv1i1s900&safe=1&attbid=ANGjdJ9RD1wkGurZeColWDNjDfsgRih5bq5MbzhqJIu92fSB_zkrvHUT6X5kSTZkyF7LhOi06P9nJebby3G9HkvsuRKpeCCCDuZinft7RkjH3OIfYtikz486zUxvti0&ats=1478198562042&rm=158272d1116a1bdd&zw&sz=w2880-h1552\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.navStyle {\n  padding: 20px 0;\n}\n.navStyle ul {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n}\n.navStyle li {\n  display: inline;\n}\n.navStyle a {\n  color: white;\n  text-align: center;\n  text-decoration: none;\n  padding: 20px;\n}\n.navStyle a:hover {\n  background-color: rgba(0, 0, 0, 0.1);\n}\nhtml,\nbody,\n#app {\n  margin: 0;\n  padding: 0;\n}\n", ""]);
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	// exports
+
+
+/***/ },
+/* 187 */,
+/* 188 */,
+/* 189 */
+/*!**********************************!*\
+  !*** ./~/normalize-css/index.js ***!
+  \**********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var insert = __webpack_require__(/*! insert-css */ 190);
+	var normalize = __webpack_require__(/*! ./normalize */ 191);
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	insert(normalize);
+
+
+/***/ },
+/* 190 */
+/*!*******************************!*\
+  !*** ./~/insert-css/index.js ***!
+  \*******************************/
+/***/ function(module, exports) {
+
+	var inserted = [];
 	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var LanguageButton = function (_React$Component) {
-	  _inherits(LanguageButton, _React$Component);
-	
-	  function LanguageButton() {
-	    _classCallCheck(this, LanguageButton);
-	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(LanguageButton).apply(this, arguments));
-	  }
-	
-	  _createClass(LanguageButton, [{
-	    key: 'lang',
-	    value: function lang() {
-	      if (this.props.lang == 'es') return 'English';else if (this.props.lang == 'en') return 'Español';
+	module.exports = function (css) {
+	    if (inserted.indexOf(css) >= 0) return;
+	    inserted.push(css);
+	    
+	    var elem = document.createElement('style');
+	    var text = document.createTextNode(css);
+	    elem.appendChild(text);
+	    
+	    if (document.head.childNodes.length) {
+	        document.head.insertBefore(elem, document.head.childNodes[0]);
 	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { onClick: this.toggle.bind(this), className: 'waves-effect waves-light btn language-button red lighten-2' },
-	        this.lang()
-	      );
+	    else {
+	        document.head.appendChild(elem);
 	    }
-	  }, {
-	    key: 'toggle',
-	    value: function toggle() {
-	      if (this.props.lang == 'en') this.props.onChange('es');else if (this.props.lang == 'es') this.props.onChange('en');
-	    }
-	  }]);
-	
-	  return LanguageButton;
-	}(_react2.default.Component);
-	
-	module.exports = LanguageButton;
+	};
+
+
+/***/ },
+/* 191 */
+/*!**************************************!*\
+  !*** ./~/normalize-css/normalize.js ***!
+  \**************************************/
+/***/ function(module, exports) {
+
+	module.exports = "/*! normalize.css v2.1.3 | MIT License | git.io/normalize */\n\n/* ==========================================================================\n   HTML5 display definitions\n   ========================================================================== */\n\n/**\n * Correct `block` display not defined in IE 8/9.\n */\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nnav,\nsection,\nsummary {\n    display: block;\n}\n\n/**\n * Correct `inline-block` display not defined in IE 8/9.\n */\n\naudio,\ncanvas,\nvideo {\n    display: inline-block;\n}\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\n\naudio:not([controls]) {\n    display: none;\n    height: 0;\n}\n\n/**\n * Address `[hidden]` styling not present in IE 8/9.\n * Hide the `template` element in IE, Safari, and Firefox < 22.\n */\n\n[hidden],\ntemplate {\n    display: none;\n}\n\n/* ==========================================================================\n   Base\n   ========================================================================== */\n\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\n\nhtml {\n    font-family: sans-serif; /* 1 */\n    -ms-text-size-adjust: 100%; /* 2 */\n    -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/**\n * Remove default margin.\n */\n\nbody {\n    margin: 0;\n}\n\n/* ==========================================================================\n   Links\n   ========================================================================== */\n\n/**\n * Remove the gray background color from active links in IE 10.\n */\n\na {\n    background: transparent;\n}\n\n/**\n * Address `outline` inconsistency between Chrome and other browsers.\n */\n\na:focus {\n    outline: thin dotted;\n}\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\n\na:active,\na:hover {\n    outline: 0;\n}\n\n/* ==========================================================================\n   Typography\n   ========================================================================== */\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari 5, and Chrome.\n */\n\nh1 {\n    font-size: 2em;\n    margin: 0.67em 0;\n}\n\n/**\n * Address styling not present in IE 8/9, Safari 5, and Chrome.\n */\n\nabbr[title] {\n    border-bottom: 1px dotted;\n}\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.\n */\n\nb,\nstrong {\n    font-weight: bold;\n}\n\n/**\n * Address styling not present in Safari 5 and Chrome.\n */\n\ndfn {\n    font-style: italic;\n}\n\n/**\n * Address differences between Firefox and other browsers.\n */\n\nhr {\n    -moz-box-sizing: content-box;\n    box-sizing: content-box;\n    height: 0;\n}\n\n/**\n * Address styling not present in IE 8/9.\n */\n\nmark {\n    background: #ff0;\n    color: #000;\n}\n\n/**\n * Correct font family set oddly in Safari 5 and Chrome.\n */\n\ncode,\nkbd,\npre,\nsamp {\n    font-family: monospace, serif;\n    font-size: 1em;\n}\n\n/**\n * Improve readability of pre-formatted text in all browsers.\n */\n\npre {\n    white-space: pre-wrap;\n}\n\n/**\n * Set consistent quote types.\n */\n\nq {\n    quotes: \"\\201C\" \"\\201D\" \"\\2018\" \"\\2019\";\n}\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\n\nsmall {\n    font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\n\nsub,\nsup {\n    font-size: 75%;\n    line-height: 0;\n    position: relative;\n    vertical-align: baseline;\n}\n\nsup {\n    top: -0.5em;\n}\n\nsub {\n    bottom: -0.25em;\n}\n\n/* ==========================================================================\n   Embedded content\n   ========================================================================== */\n\n/**\n * Remove border when inside `a` element in IE 8/9.\n */\n\nimg {\n    border: 0;\n}\n\n/**\n * Correct overflow displayed oddly in IE 9.\n */\n\nsvg:not(:root) {\n    overflow: hidden;\n}\n\n/* ==========================================================================\n   Figures\n   ========================================================================== */\n\n/**\n * Address margin not present in IE 8/9 and Safari 5.\n */\n\nfigure {\n    margin: 0;\n}\n\n/* ==========================================================================\n   Forms\n   ========================================================================== */\n\n/**\n * Define consistent border, margin, and padding.\n */\n\nfieldset {\n    border: 1px solid #c0c0c0;\n    margin: 0 2px;\n    padding: 0.35em 0.625em 0.75em;\n}\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\n\nlegend {\n    border: 0; /* 1 */\n    padding: 0; /* 2 */\n}\n\n/**\n * 1. Correct font family not being inherited in all browsers.\n * 2. Correct font size not being inherited in all browsers.\n * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.\n */\n\nbutton,\ninput,\nselect,\ntextarea {\n    font-family: inherit; /* 1 */\n    font-size: 100%; /* 2 */\n    margin: 0; /* 3 */\n}\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\n\nbutton,\ninput {\n    line-height: normal;\n}\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.\n * Correct `select` style inheritance in Firefox 4+ and Opera.\n */\n\nbutton,\nselect {\n    text-transform: none;\n}\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\n\nbutton,\nhtml input[type=\"button\"], /* 1 */\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n    -webkit-appearance: button; /* 2 */\n    cursor: pointer; /* 3 */\n}\n\n/**\n * Re-set default cursor for disabled elements.\n */\n\nbutton[disabled],\nhtml input[disabled] {\n    cursor: default;\n}\n\n/**\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\n\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n    box-sizing: border-box; /* 1 */\n    padding: 0; /* 2 */\n}\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome\n *    (include `-moz` to future-proof).\n */\n\ninput[type=\"search\"] {\n    -webkit-appearance: textfield; /* 1 */\n    -moz-box-sizing: content-box;\n    -webkit-box-sizing: content-box; /* 2 */\n    box-sizing: content-box;\n}\n\n/**\n * Remove inner padding and search cancel button in Safari 5 and Chrome\n * on OS X.\n */\n\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n    -webkit-appearance: none;\n}\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n    border: 0;\n    padding: 0;\n}\n\n/**\n * 1. Remove default vertical scrollbar in IE 8/9.\n * 2. Improve readability and alignment in all browsers.\n */\n\ntextarea {\n    overflow: auto; /* 1 */\n    vertical-align: top; /* 2 */\n}\n\n/* ==========================================================================\n   Tables\n   ========================================================================== */\n\n/**\n * Remove most spacing between table cells.\n */\n\ntable {\n    border-collapse: collapse;\n    border-spacing: 0;\n}\n"
+
 
 /***/ }
 /******/ ]);
