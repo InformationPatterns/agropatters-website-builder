@@ -3,7 +3,9 @@ import {render} from 'react-dom';
 
 import Header from './components/html/Header.jsx';
 import Footer from './components/html/Footer.jsx';
-import Body from './components/html/Body.jsx';
+import Design from './components/html/Design.jsx';
+import Photos from './components/html/Photos.jsx';
+import Art from './components/html/Art.jsx';
 
 import BackToTop from './components/html/BackToTop.jsx';
 import './components/css/main.less';
@@ -20,9 +22,11 @@ class App extends React.Component {
     let lang = this.state.lang
     return (<div id="top" className='test'>
     	<Header />
-      <Body />
+      <Design />
+      <Photos />
+      <Art />
 			<Footer />
-			<BackToTop />
+			{/* <BackToTop /> */}
 		</div>);
   }
   onChange(lang) {

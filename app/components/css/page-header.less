@@ -1,0 +1,29 @@
+.page-header {
+    background-image: url("https://photos.smugmug.com/WF/Emma-Stoumen-Portfolio/Details/n-F9VBR9/i-H8M6qPn/0/X3/i-H8M6qPn-X3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header .title-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-header .title {
+  font-size: 6rem;
+  font-family: 'Josefin Sans', sans-serif;
+  animation: fadein 4s;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

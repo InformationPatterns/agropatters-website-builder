@@ -1,7 +1,67 @@
-@import "./headerImage.less";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300|Raleway:200|Work+Sans:200');
+@import "./page-header.less";
 @import "./navbar.less";
+@import "./page-footer.less";
+@import "./page-design.less";
+@import "./page-photos.less";
+@import "./page-art.less";
 
 html, body, #app {
   margin: 0;
   padding: 0;
+  font-size: 16px;
+  transition: font-size 0.5s;
+}
+
+@media screen and (max-width: 1024px)  {
+  html, body {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 667px)  {
+  html, body {
+    font-size: 60%;
+  }
+}
+
+.page-content{
+  height: 50vh;
+  background-color: #ccc;
+  display: flex;
+  .image-wrapper{
+    width: 50vw;
+  }
+  .content-wrapper{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 5px 0px 10px 0px;
+    border-color: gray;
+    border-radius: 2px;
+  }
+  .position{
+    max-width: 70%;
+  }
+  .content-title{
+    background-color: #333;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+  }
+  .content-subtitle{
+    font-size: 1.5rem;
+    font-family: 'Work Sans', sans-serif;
+  }
+  .block{
+    border-style: solid;
+    border-color: black;
+    border-width: 20px;
+    border-radius: 20px;
+    background-color: black;
+  }
+
 }
